@@ -38,17 +38,12 @@ const RecentBlogs = () => {
     }
   };
 
-  // const singlePost =
-  //   recent &&
-  //   recent.slice(recent.length - 4, recent.length).map(({ userId }) => userId);
-
-  // const findUser = user && user.find(({ id }) => id === singlePost.map);
-  // console.log(findUser);
-
   useEffect(() => {
     recentBlogs();
     users();
   }, []);
+
+  const shuffled = recent && recent.sort(() => 0.5 - Math.random()).slice(0, 4);
 
   return (
     <>
@@ -59,10 +54,12 @@ const RecentBlogs = () => {
           <div className="section-wrapper">
             <h1 className="section-title">Recent Posts</h1>
             <div className="recent-grid-section">
-              {recent ? (
-                recent
-                  .slice(recent.length - 4, recent.length)
-                  .map((r, i) => <ContentCard content={r} key={i} />)
+              {shuffled ? (
+                shuffled
+                  // .slice(recent.length - 4, recent.length)
+                  .map((r, i) => (
+                    <ContentCard content={r} user={user} key={i} />
+                  ))
               ) : (
                 <h2 className="no-post">No Recent Posts</h2>
               )}

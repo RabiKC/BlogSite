@@ -3,6 +3,8 @@ import Home from "./Pages/Home/Home.jsx";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Blogs from "./Pages/Blog/Blogs.jsx";
+import Profile from "./Pages/UserProfile/Profile.jsx";
+import Single from "./Pages/Blog/SingleBlog/Single.jsx";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id/:userId" element={<Single />} />
+          <Route path="/:userId/:username" element={<Profile />} />
         </Routes>
       </Router>
     </div>
