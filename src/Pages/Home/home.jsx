@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
+import RecentBlogs from "./RecentBlogs";
+import PopularBlogs from "./PopularBlogs";
 
 const usersUrl = "http://localhost:8000/users";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState();
+
   useEffect(() => {
     fetch(usersUrl)
       .then((res) => res.json())
@@ -22,12 +25,14 @@ const Home = () => {
         }}
       >
         <h1 className="hero-title">Post Your Blogs Here</h1>
-        <div className="users">
+        {/* <div className="users">
           {users.map((u, i) => (
             <span key={i}>{u.name}</span>
           ))}
-        </div>
+        </div> */}
       </section>
+      <RecentBlogs />
+      <PopularBlogs />
     </main>
   );
 };

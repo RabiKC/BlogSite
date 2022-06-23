@@ -1,8 +1,9 @@
 .page-navbar {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   height: 75px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -15,8 +16,4 @@
 
 .nav-links li:not(:last-child) {
   margin-right: 3rem;
-}
-
-.nav-link a {
-  text-decoration: none;
 }
