@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const ContentCard = ({ content, user }) => {
+const userUrl = "http://localhost:8000/users";
+
+const ContentCard = ({ content }) => {
+  const [user, setUser] = useState(null);
+
+  const users = () => {
+    try {
+      fetch(userUrl)
+        .then((res) => res.json())
+        .then((data) => {
+          setUser(data);
+          console.log(data);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    users();
+  }, []);
+
   const postUser = user && user.find(({ id }) => id === content.userId);
   const userLink = postUser && `${postUser.id}/${postUser.username}`;
   const postLink = `blogs/${content.id}/${content.userId}`;

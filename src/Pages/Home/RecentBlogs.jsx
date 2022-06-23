@@ -3,11 +3,9 @@ import React, { useState, useEffect } from "react";
 import ContentCard from "./ContentCard";
 
 const postUrl = "http://localhost:8000/posts";
-const userUrl = "http://localhost:8000/users";
 
 const RecentBlogs = () => {
   const [recent, setRecent] = useState(null);
-  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const recentBlogs = async () => {
@@ -25,22 +23,8 @@ const RecentBlogs = () => {
     }
   };
 
-  const users = () => {
-    try {
-      fetch(userUrl)
-        .then((res) => res.json())
-        .then((data) => {
-          setUser(data);
-          console.log(data);
-        });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
     recentBlogs();
-    users();
   }, []);
 
   const shuffled = recent && recent.sort(() => 0.5 - Math.random()).slice(0, 4);
@@ -57,9 +41,7 @@ const RecentBlogs = () => {
               {shuffled ? (
                 shuffled
                   // .slice(recent.length - 4, recent.length)
-                  .map((r, i) => (
-                    <ContentCard content={r} user={user} key={i} />
-                  ))
+                  .map((r, i) => <ContentCard content={r} key={i} />)
               ) : (
                 <h2 className="no-post">No Recent Posts</h2>
               )}
