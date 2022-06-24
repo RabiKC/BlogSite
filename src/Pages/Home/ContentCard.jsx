@@ -37,8 +37,10 @@ const ContentCard = ({ content }) => {
           {postUser && (
             <>
               <Link to={userLink} className="user-info">
-                <div className="user-pic"></div>
-                <span className="user-name">{postUser && postUser.name}</span>
+                <div className="user-pic">
+                  <img src={postUser.profileImg} alt={postUser.name} />
+                </div>
+                <span className="user-name">{ postUser.name}</span>
               </Link>
             </>
           )}

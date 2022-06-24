@@ -7,7 +7,9 @@ const UserDetail = ({ user }) => {
   return (
     <div className="user-section">
       <div className="user-details">
-        <div className="user-image"></div>
+        <Link to={userLink} className="user-image">
+          <img src={user.profileImg} alt="" />
+        </Link>
         <div className="user-detail">
           <Link to={userLink} className="user-name">
             {user.name}

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Blog from "./Blog";
 import Sidebar from "./Sidebar";
-import CommentSection from "./CommentSection";
+import CommentSection from "./Comment/CommentSection";
 import "./single.css";
 
 const Single = () => {

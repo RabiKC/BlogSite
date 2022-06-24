@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import RecentBlogs from "./RecentBlogs";
 import PopularBlogs from "./PopularBlogs";
 
 const Home = () => {
+  const [loading, setLoading] = useState(false)
   return (
+    <>
+    {loading ?
+    <div className="loading-section">Loading...</div>
+    :
     <main className="home-page">
       <section
         className="hero-section"
@@ -19,6 +24,9 @@ const Home = () => {
       <RecentBlogs />
       <PopularBlogs />
     </main>
+}
+    </>
+    
   );
 };
 

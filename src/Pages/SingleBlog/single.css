@@ -40,13 +40,25 @@
 .blog-section .user-image {
   width: 50px;
   height: 50px;
-  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.blog-section .user-image img{
+  width: 100%;
   border-radius: 50%;
 }
 
 .blog-section .user-detail {
   display: flex;
   flex-direction: column;
+}
+
+.blog-section .user-name{
+  transition: color 200ms ease;
+}
+
+.blog-section .user-name:hover{
+  color: var(--secondary-color);
 }
 
 .blog-section .user-detail span {
@@ -149,6 +161,38 @@
 .comment-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+.post-comment{
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.post-comment textarea{
+  width: 100%;
+  resize: none;
+  min-height: 100px;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.post-comment input{
+  position: absolute;
+  bottom: 6%;
+  right: .5%;
+  border: 1px solid var(--primary-color);
+  padding: .7rem 1.4rem;
+  background-color: var(--primary-color);
+  border-radius: 100vmax;
+  color: #fff;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.post-comment input:hover{
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: #fff;
 }
 
 .single-comment {

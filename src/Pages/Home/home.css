@@ -56,7 +56,11 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: #000 1px solid;
+}
+
+.user-pic img{
+  width: 100%;
+  border-radius: 50%;
 }
 
 .post-card .post-content-flex {
