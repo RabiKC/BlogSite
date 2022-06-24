@@ -15,6 +15,7 @@
   --tertiary-color: #a5def1;
   --accent-color: #fff;
   --divider: rgb(220, 220, 220);
+  --gray-text-color: rgb(200, 200, 200);
 }
 
 a {
