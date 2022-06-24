@@ -70,3 +70,33 @@
 .comment-title {
   font-size: 2rem;
 }
+
+.single-comment {
+  padding: 1rem;
+}
+
+.single-comment:not(:last-child) {
+  border-bottom: 1px solid var(--divider);
+}
+
+.single-comment .user-detail {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+.single-comment .user-pic {
+  width: 30px;
+  height: 30px;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+}
+
+.single-comment .username {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.single-comment .user-comment {
+  padding: 0.5rem 0;
+}

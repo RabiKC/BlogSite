@@ -12,6 +12,8 @@ const Single = () => {
   const { id, userId } = useParams();
   const [loading, setLoading] = useState(false);
 
+  const postId = parseInt(id);
+
   const blogUrl = `http://localhost:8000/posts/${id}`;
   const userUrl = `http://localhost:8000/users/${userId}`;
 
@@ -60,7 +62,7 @@ const Single = () => {
         <main className="single-blog-page">
           <Blog user={user} blog={blog} />
           <Sidebar user={user} />
-          <CommentSection postId={id} />
+          <CommentSection postId={postId} />
         </main>
       ) : (
         <h1>Error</h1>
