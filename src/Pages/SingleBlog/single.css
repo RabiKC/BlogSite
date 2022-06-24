@@ -49,7 +49,7 @@
   flex-direction: column;
 }
 
-.blog-section .user-detail span:last-child {
+.blog-section .user-detail span {
   font-size: 0.9rem;
   color: var(--gray-text-color);
 }
@@ -73,7 +73,7 @@
 .blog-content .blog-subtitle {
   color: var(--gray-text-color);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 3rem;
 }
 

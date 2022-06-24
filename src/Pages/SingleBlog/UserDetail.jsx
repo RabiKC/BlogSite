@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import { BsTwitter, BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 
 const UserDetail = ({ user }) => {
+  const userLink = `/users/${user.id}/${user.username}`;
   return (
     <div className="user-section">
       <div className="user-details">
         <div className="user-image"></div>
         <div className="user-detail">
-          <span className="user-name">{user.name}</span>
+          <Link to={userLink} className="user-name">
+            {user.name}
+          </Link>
           <span>June 3, 2022</span>
         </div>
       </div>
