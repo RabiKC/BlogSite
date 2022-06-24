@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Blogs from "./Pages/Blog/Blogs.jsx";
 import Profile from "./Pages/UserProfile/Profile.jsx";
-import Single from "./Pages/Blog/SingleBlog/Single.jsx";
+import Single from "./Pages/SingleBlog/Single.jsx";
 
 function App() {
   return (

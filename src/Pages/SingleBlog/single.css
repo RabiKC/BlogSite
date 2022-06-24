@@ -5,32 +5,32 @@
   grid-template-columns: 0.7fr 0.3fr;
 }
 
-.blog-section {
-  padding: 5rem 3rem;
-  border-right: 1px var(--divider) solid;
-}
-
-.blog-section .blog-content {
-  padding: 3rem 0 0;
-}
-
-.blog-content .blog-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.blog-content .blog-subtitle {
-  color: var(--gray-text-color);
-  font-weight: 500;
-  margin-bottom: 3rem;
-}
-
-.single-blog-sidebar {
-  padding: 5rem 1.5rem 0;
-}
+/******* BLOG USER SECTION *******/
 
 .blog-section .user-section {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-section .user-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-social-links a {
+  color: var(--gray-text-color);
+  transition: color 200ms ease;
+}
+
+.user-social-links a:hover {
+  color: black;
+}
+
+.blog-section .user-details {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -43,6 +43,66 @@
   background-color: var(--secondary-color);
   border-radius: 50%;
 }
+
+.blog-section .user-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-section .user-detail span:last-child {
+  font-size: 0.9rem;
+  color: var(--gray-text-color);
+}
+
+/********* BLOG SECTION *******/
+
+.blog-section {
+  padding: 5rem 3rem;
+  border-right: 1px var(--divider) solid;
+}
+
+.blog-section .blog-content {
+  padding: 3rem 0 0;
+}
+
+.blog-content .blog-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content .blog-subtitle {
+  color: var(--gray-text-color);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.blog-texts {
+  text-align: center;
+}
+
+.blog-texts p {
+  text-align: justify;
+}
+
+.blog-texts img,
+.blog-texts p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.single-blog-sidebar {
+  padding: 5rem 1.5rem 0;
+}
+
+.blog-content img {
+  width: 75%;
+}
+
+.blog-content img:first-child {
+  width: 85%;
+}
+
+/******* SIDEBAR *******/
 
 .get-started {
   display: flex;
@@ -78,21 +138,22 @@
   color: var(--secondary-color);
 }
 
-.comment-section {
-  padding: 3rem 0 0;
-  border: 1px solid var(--divider);
-  padding: 1rem;
-}
+/****** COMMENT SECTION ******/
 
-.comment-section .comments {
+.comment-section {
+  padding: 3rem 0rem 0;
+  border: 1px solid var(--divider);
+  padding: 2rem;
 }
 
 .comment-title {
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .single-comment {
-  padding: 1rem;
+  padding: 1rem 0;
+  text-align: justify;
 }
 
 .single-comment:not(:last-child) {
