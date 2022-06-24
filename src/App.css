@@ -9,6 +9,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --primary-color: #3a7b99;
+  --secondary-color: #70afce;
+  --tertiary-color: #a5def1;
+  --accent-color: #fff;
+  --divider: rgb(220, 220, 220);
+}
+
 a {
   color: #000;
   text-decoration: none;

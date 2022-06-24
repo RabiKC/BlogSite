@@ -9,15 +9,15 @@ const RecentBlogs = () => {
   const [loading, setLoading] = useState(false);
 
   const recentBlogs = async () => {
+    setLoading(true);
+
     try {
-      setLoading(true);
       const data = await axios.get(postUrl);
 
       setRecent(data.data);
       console.log(data.data);
       setLoading(false);
     } catch (error) {
-      setLoading(true);
       console.log(error);
       setLoading(false);
     }

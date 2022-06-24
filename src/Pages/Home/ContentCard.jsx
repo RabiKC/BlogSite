@@ -26,7 +26,6 @@ const ContentCard = ({ content }) => {
   const postUser = user && user.find(({ id }) => id === content.userId);
   const userLink = postUser && `${postUser.id}/${postUser.username}`;
   const postLink = `blogs/${content.id}/${content.userId}`;
-  console.log(postUser);
 
   return (
     <div className="post-card">

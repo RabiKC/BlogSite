@@ -1,0 +1,72 @@
+.single-blog-page {
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+}
+
+.blog-section {
+  padding: 5rem 3rem 0;
+  border-right: 1px var(--divider) solid;
+}
+
+.single-blog-sidebar {
+  padding: 5rem 1.5rem 0;
+}
+
+.blog-section .user-section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-section .user-image {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.get-started {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-started-link {
+  padding: 0.8rem 2.4rem;
+  background-color: var(--primary-color);
+  border: var(--primary-color) 1px solid;
+  color: var(--accent-color);
+  border-radius: 100vmax;
+  white-space: nowrap;
+  transition: all 200ms ease;
+}
+
+.get-started-link:hover {
+  border: 1px solid var(--secondary-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border-radius: 40px;
+}
+
+.get-started .sign-in-link {
+  color: var(--primary-color);
+  transition: color 200ms ease;
+  white-space: nowrap;
+}
+
+.get-started .sign-in-link:hover {
+  color: var(--secondary-color);
+}
+
+.comment-section {
+  padding: 3rem 0 0;
+}
+
+.comment-title {
+  font-size: 2rem;
+}

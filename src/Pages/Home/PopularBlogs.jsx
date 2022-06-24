@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ContentCard from "./ContentCard";
 
 const postUrl = "http://localhost:8000/posts";
-const userUrl = "http://localhost:8000/users";
 
 const PopularBlogs = () => {
   const [popular, setPopular] = useState(null);
@@ -26,6 +26,9 @@ const PopularBlogs = () => {
     popularBlogs();
   }, []);
 
+  const shuffled =
+    popular && popular.sort(() => 0.5 - Math.random()).slice(0, 4);
+
   return (
     <>
       {loading ? (
@@ -35,8 +38,8 @@ const PopularBlogs = () => {
           <div className="section-wrapper">
             <h1 className="section-title">Popular Posts</h1>
             <div className="popular-grid-section">
-              {popular ? (
-                popular.map((p, i) => <span key={i}>{p.id}</span>)
+              {shuffled ? (
+                shuffled.map((p, i) => <ContentCard key={i} content={p} />)
               ) : (
                 <h2 className="no-post">No Popular Posts</h2>
               )}

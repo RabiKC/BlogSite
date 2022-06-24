@@ -1,10 +1,20 @@
+.page-header {
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid var(--divider);
+}
+
 .page-navbar {
   width: 70%;
-  margin: 0 auto;
   height: 75px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.page-logo a {
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 .nav-links {
@@ -16,4 +26,8 @@
 
 .nav-links li:not(:last-child) {
   margin-right: 3rem;
+}
+
+.nav-link a {
+  color: var(--primary-color);
 }
