@@ -31,16 +31,20 @@ const ContentCard = ({ content }) => {
     <div className="post-card">
       <div className="post-content-flex">
         <Link to={postLink}>
-          <h3>{content.title}</h3>
+          <h2>{content.title}</h2>
         </Link>
         <div className="btm-part">
           {postUser && (
             <>
+              <img
+                src={`https://picsum.photos/535/300?random=${content.id}`}
+                alt=""
+              />
               <Link to={userLink} className="user-info">
                 <div className="user-pic">
                   <img src={postUser.profileImg} alt={postUser.name} />
                 </div>
-                <span className="user-name">{ postUser.name}</span>
+                <span className="user-name">{postUser.name}</span>
               </Link>
             </>
           )}

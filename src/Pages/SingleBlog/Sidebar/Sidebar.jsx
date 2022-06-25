@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import MoreContent from "./MoreContent";
+
 const Sidebar = () => {
   return (
     <aside className="single-blog-sidebar">
@@ -12,6 +14,7 @@ const Sidebar = () => {
           Sign in
         </Link>
       </div>
+      <MoreContent />
     </aside>
   );
 };

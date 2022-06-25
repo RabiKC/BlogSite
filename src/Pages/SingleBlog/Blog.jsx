@@ -41,15 +41,11 @@ const Blog = ({ user, blog }) => {
             error ipsa molestias rem. Autem animi quae, velit ad voluptatibus
             pariatur repellendus alias maxime nam nulla enim dicta quod
             blanditiis labore suscipit officiis cupiditate voluptatem atque.
-            Voluptates, ipsam eius quis aut, quos cumque perspiciatis sit, cum
-            obcaecati sint nostrum facere voluptatum modi deleniti! Deleniti non
-            repellat omnis alias ullam natus qui laudantium assumenda sunt. Quis
-            eaque nesciunt dicta quae modi eveniet natus ut officia totam
-            maiores inventore nulla dignissimos, quidem illo deserunt harum est
-            numquam accusantium veritatis voluptatem vero nostrum non incidunt?
-            Qui commodi laborum nisi aperiam. Non suscipit porro esse modi eaque
-            ratione velit, eos cupiditate sed, quas exercitationem eum error rem
-            cum deserunt voluptatibus!
+            Deleniti non repellat omnis alias ullam natus qui laudantium
+            assumenda sunt. Quis eaque nesciunt dicta quae modi eveniet natus ut
+            officia totam maiores inventore nulla dignissimos, quidem illo
+            deserunt harum est numquam accusantium veritatis voluptatem vero
+            nostrum non incidunt? Qui commodi laborum nisi aperiam.
           </p>
           <img src={randomImg && randomImg[1].link} alt="Blogs" />
           <p>
@@ -63,13 +59,11 @@ const Blog = ({ user, blog }) => {
             eius odit minus? Eligendi accusantium perferendis modi nemo id
             inventore illum minus mollitia, corrupti voluptate vel eum
             voluptatum repudiandae cupiditate cum saepe ducimus voluptatem
-            temporibus consectetur quidem ipsa pariatur at? Maxime dolor,
-            dignissimos velit neque voluptatem ducimus ipsum eum nobis aperiam
-            saepe doloribus earum quae dolorem similique nisi qui nostrum?
-            Itaque consequatur soluta autem et ducimus sed aspernatur molestias
-            quis ratione sunt nemo laboriosam voluptatibus repellendus unde
-            optio praesentium nulla suscipit reiciendis officia minus possimus,
-            deleniti necessitatibus inventore at! Blanditiis, pariatur impedit.
+            temporibus consectetur quidem ipsa pariatur at? Itaque consequatur
+            soluta autem et ducimus sed aspernatur molestias quis ratione sunt
+            nemo laboriosam voluptatibus repellendus unde optio praesentium
+            nulla suscipit reiciendis officia minus possimus, deleniti
+            necessitatibus inventore at! Blanditiis, pariatur impedit.
           </p>
           <img src={randomImg && randomImg[2].link} alt="Blogs" />
           <p>
@@ -84,15 +78,9 @@ const Blog = ({ user, blog }) => {
             minima nostrum molestiae quasi, dignissimos veritatis dolore odio
             repellendus provident harum facere ut iure rem voluptatum sequi
             commodi quidem maxime hic ipsam iusto qui, molestias praesentium. A
-            eos saepe odit? Ab molestiae et repudiandae. Aspernatur perferendis
-            officiis excepturi reiciendis culpa facilis iure nisi, voluptatem,
-            nobis delectus repellendus fugit dignissimos et expedita corrupti
-            dolorem aut, doloribus exercitationem adipisci cupiditate laborum
-            nostrum amet. Sunt dolor repudiandae sapiente quod, ad aspernatur
-            ipsum sequi quo aperiam! Similique iste nihil repellendus porro
-            incidunt alias, iusto sed cumque facilis? Aspernatur, labore facere
-            odit repudiandae aperiam voluptates vitae, quidem, delectus sint
-            beatae excepturi.
+            eos saepe odit? Ab molestiae et repudiandae.Aspernatur, labore
+            facere odit repudiandae aperiam voluptates vitae, quidem, delectus
+            sint beatae excepturi.
           </p>
           <img src={randomImg && randomImg[3].link} alt="Blogs" />
           <p>
@@ -106,16 +94,7 @@ const Blog = ({ user, blog }) => {
             exercitationem tempore debitis omnis dignissimos, reprehenderit
             optio, veritatis placeat est, enim quisquam consectetur eveniet
             quibusdam culpa velit sed magni aperiam. Modi quisquam deleniti quae
-            qui, accusamus optio reiciendis ullam maiores aut? Corporis
-            accusantium ex dicta culpa praesentium maiores dolores tenetur nihil
-            quae sunt rerum, qui eligendi. Error eos aperiam suscipit debitis ea
-            iure aut obcaecati dicta! Explicabo aperiam harum blanditiis est ex
-            ullam nesciunt perspiciatis quasi ipsa sequi incidunt repellat
-            consectetur rem debitis, sed corrupti adipisci atque nulla expedita
-            cupiditate dolor pariatur voluptatum. Autem dicta accusamus eos
-            possimus temporibus illum doloremque dolorem quod voluptas at ex
-            ipsa eligendi, qui ut iusto laborum est quisquam inventore sint
-            aspernatur aut.
+            qui, accusamus optio reiciendis ullam maiores aut?
           </p>
           <p>
             Hic harum earum labore quasi libero tenetur deleniti architecto
@@ -138,14 +117,7 @@ const Blog = ({ user, blog }) => {
             tempore eveniet, atque aliquid obcaecati omnis ipsa illum ea nobis?
             Voluptatibus consectetur incidunt recusandae dolorem ipsa quisquam
             a, necessitatibus nihil aperiam quas fugiat error sequi hic minima
-            corporis porro eveniet culpa maxime dolor assumenda. Deleniti
-            aperiam atque quas porro, modi, at vitae optio consequatur sequi vel
-            voluptates veritatis quia corrupti dolores facilis harum ratione
-            quibusdam quam, commodi ut dolorem iusto! Dolores, veritatis? Libero
-            odit voluptas molestiae eius, error soluta quibusdam, quidem quia
-            laboriosam provident reprehenderit deleniti voluptate quasi fugit.
-            Ex quia magni repellat, possimus laudantium accusantium, facere eos,
-            aut natus libero asperiores id omnis optio maxime qui saepe.
+            corporis porro eveniet culpa maxime dolor assumenda.
           </p>
 
           <p>

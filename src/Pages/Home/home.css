@@ -10,14 +10,14 @@
 }
 
 .hero-title {
-  color: #fff;
+  color: var(--secondary-color);
   font-size: 3.5rem;
   margin-bottom: 3rem;
 }
 
 .hero-section a {
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -35,13 +35,25 @@
 }
 
 .post-card {
-  border: 1px #000 solid;
+  border: 1px var(--divider) solid;
   padding: 1rem;
   border-radius: 5px;
 }
 
-.post-card h3 {
+.post-card h2 {
   margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: color 200ms ease;
+}
+
+.post-card h2:hover {
+  color: var(--primary-color);
+}
+
+.post-card img {
+  width: 100%;
+  margin-bottom: 0.6rem;
 }
 
 .post-card .user-info {
@@ -52,13 +64,22 @@
   gap: 0.6rem;
 }
 
+.post-card .user-name {
+  transition: color 200ms ease;
+  font-size: 0.9rem;
+}
+
+.post-card .user-name:hover {
+  color: var(--primary-color);
+}
+
 .post-card .user-pic {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-.user-pic img{
+.user-pic img {
   width: 100%;
   border-radius: 50%;
 }
@@ -73,5 +94,6 @@
 }
 
 .post-card .posts-desc {
+  color: var(--darker-gray);
   text-align: justify;
 }

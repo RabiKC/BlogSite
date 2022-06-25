@@ -15,7 +15,8 @@
   --tertiary-color: #a5def1;
   --accent-color: #fff;
   --divider: rgb(220, 220, 220);
-  --gray-text-color: rgb(190, 190, 190);
+  --gray-color: rgb(180, 180, 180);
+  --darker-gray: rgb(155, 155, 155);
 }
 
 a {
@@ -38,10 +39,16 @@ li {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2.3rem;
   margin-bottom: 2rem;
 }
 
-p{
+p {
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }

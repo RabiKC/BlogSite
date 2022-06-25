@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Blog from "./Blog";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import CommentSection from "./Comment/CommentSection";
 import "./single.css";
 
