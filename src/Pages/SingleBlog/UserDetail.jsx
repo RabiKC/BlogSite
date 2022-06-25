@@ -11,9 +11,29 @@ const UserDetail = ({ user }) => {
           <img src={user.profileImg} alt="" />
         </Link>
         <div className="user-detail">
-          <Link to={userLink} className="user-name">
-            {user.name}
-          </Link>
+          <div className="user-dropdown">
+            <Link to={userLink} className="user-name">
+              {user.name}
+            </Link>
+            <div className="user-dropdown-items">
+              <div className="top-half">
+                <Link to={userLink} className="user-image">
+                  <img src={user.profileImg} alt="" />
+                </Link>
+                <Link to={userLink} className="user-name">
+                  {user.name}
+                </Link>
+              </div>
+              <div className="bottom-half">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quidem ex eum provident, vero unde sapiente itaque veritatis?
+                  Ipsam, recusandae harum?
+                </p>
+                <Link to="#">{user.website}</Link>
+              </div>
+            </div>
+          </div>
           <span>June 3, 2022</span>
         </div>
       </div>
