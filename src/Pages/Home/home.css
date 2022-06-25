@@ -1,23 +1,44 @@
 .hero-section {
   width: 100%;
-  height: calc(100vh - 75px);
+  min-height: calc(100vh - 75px);
   background-size: 100%;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-wrapper {
+  display: flex;
+}
+
+.hero-wrapper .hero-right,
+.hero-wrapper .hero-left {
+  flex-basis: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+.hero-wrapper .hero-left {
+  flex-basis: 60%;
+  align-items: flex-start;
+}
+
+.hero-right {
+  color: var(--accent-color);
+}
+
 .hero-title {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   font-size: 3.5rem;
   margin-bottom: 3rem;
 }
 
 .hero-section a {
   padding: 1rem 2rem;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   border-radius: 5px;
 }
 
@@ -43,12 +64,16 @@
 .post-card h2 {
   margin-bottom: 1.2rem;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: color 200ms ease;
 }
 
 .post-card h2:hover {
   color: var(--primary-color);
+}
+
+.post-card .btm-part {
+  position: relative;
 }
 
 .post-card img {
@@ -64,6 +89,27 @@
   gap: 0.6rem;
 }
 
+.post-card .user-info {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.6rem;
+  position: absolute;
+  bottom: 28%;
+  background-color: var(--primary-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0 5px 5px 0;
+  color: var(--accent-color);
+  opacity: 0.85;
+  transition: opacity 200ms ease;
+}
+
+.post-card .user-info:hover {
+  opacity: 1;
+  color: aliceblue;
+}
+
 .post-card .user-name {
   transition: color 200ms ease;
   font-size: 0.9rem;
@@ -71,6 +117,10 @@
 
 .post-card .user-name:hover {
   color: var(--primary-color);
+}
+
+.post-card .user-name:hover {
+  color: var(--accent-color);
 }
 
 .post-card .user-pic {
@@ -95,5 +145,4 @@
 
 .post-card .posts-desc {
   color: var(--darker-gray);
-  text-align: justify;
 }

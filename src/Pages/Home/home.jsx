@@ -21,11 +21,28 @@ const Home = () => {
           <section
             className="hero-section"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.4)), url(${heroImg})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.4)), url(${heroImg})`,
             }}
           >
-            <h1 className="hero-title">Post Your Blogs Here</h1>
-            <Link to="/blogs">Explore</Link>
+            <div className="section-wrapper hero-wrapper">
+              <div className="hero-left">
+                <h1 className="hero-title">Post Your Blogs Here</h1>
+                <Link to="/blogs">Explore</Link>
+              </div>
+              <div className="hero-right">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Repellat quis asperiores libero minus repellendus esse odit ex
+                quae distinctio possimus animi sint ratione sunt cupiditate iste
+                ut aliquid nostrum incidunt laborum, repudiandae corrupti
+                commodi reiciendis voluptatum. Sapiente mollitia perferendis
+                neque ab dicta quibusdam, maxime rem dolorum beatae doloribus.
+                Necessitatibus cumque repellendus libero iusto eveniet et
+                nesciunt nobis, molestias laborum unde illum nulla a, distinctio
+                atque recusandae. Explicabo, aperiam sapiente aut dolorum, odit
+                debitis repellat, veritatis modi doloribus blanditiis magnam
+                molestias!
+              </div>
+            </div>
           </section>
           <RecentBlogs />
           <PopularBlogs />
