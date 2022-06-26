@@ -27,6 +27,7 @@ const CommentSection = ({ postId }) => {
 
     if (userComment) {
       setLoading(true);
+
       const name = "dfks gsdgnis gsonigs sdgnv";
       const email = "hello@gmail.com";
       const body = userComment;
@@ -38,6 +39,7 @@ const CommentSection = ({ postId }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+
       setLoading(false);
       setMessage("Your comment has succesfully been posted");
       setUserComment("");
