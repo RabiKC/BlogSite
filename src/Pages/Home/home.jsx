@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import RecentBlogs from "./RecentBlogs";
 import PopularBlogs from "./PopularBlogs";
+import PopularBloggers from "./PopularBloggers";
 
 // https://i.picsum.photos/id/681/3840/2160.jpg?hmac=ZerVaxp0QVykVeeMjE7nvOB5q7p2cEBAfxZZYjXqlXs
 
@@ -46,6 +47,7 @@ const Home = () => {
           </section>
           <RecentBlogs />
           <PopularBlogs />
+          <PopularBloggers />
         </main>
       )}
     </>

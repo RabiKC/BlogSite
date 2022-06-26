@@ -36,6 +36,7 @@ const ContentCard = ({ content }) => {
         <div className="btm-part">
           {postUser && (
             <>
+              {/* <div> */}
               <img
                 src={`https://picsum.photos/535/300?random=${content.id}`}
                 alt=""
@@ -46,6 +47,7 @@ const ContentCard = ({ content }) => {
                 </div>
                 <span className="user-name">{postUser.name}</span>
               </Link>
+              {/* </div> */}
             </>
           )}
 
