@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const PopularBloggers = () => {
   const usersUrl = "http://localhost:8000/users";
@@ -29,8 +30,23 @@ const PopularBloggers = () => {
           {randomUser &&
             randomUser.map((r, i) => (
               <div className="bloggers-card" key={i}>
-                <img src={r.profileImg} alt={r.name} />
-                <h2> {r.name}</h2>
+                <div className="backdrop-container">
+                  <img src={r.profileCardImg} alt="" />
+                </div>
+                <div className="bloggers-card-content">
+                  <img src={r.profileImg} alt={r.name} />
+                  <h2> {r.name}</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                    distinctio molestias perspiciatis?
+                  </p>
+                  <div className="links">
+                    <Link to="#" c>
+                      Follow
+                    </Link>
+                    <Link to="#">More Info</Link>
+                  </div>
+                </div>
               </div>
             ))}
         </div>

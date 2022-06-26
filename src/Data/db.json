@@ -17,6 +17,8 @@
       },
       "phone": "1-770-736-8031 x56442",
       "profileImg": "https://picsum.photos/150/150?random=1",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=1",
+      "profileCardImg": "https://picsum.photos/450/350?random=1",
       "website": "hildegard.org",
       "company": {
         "name": "Romaguera-Crona",
@@ -42,6 +44,8 @@
       "phone": "010-692-6593 x09125",
       "website": "anastasia.net",
       "profileImg": "https://picsum.photos/150/150?random=2",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=2",
+      "profileCardImg": "https://picsum.photos/450/350?random=2",
       "company": {
         "name": "Deckow-Crist",
         "catchPhrase": "Proactive didactic contingency",
@@ -66,6 +70,8 @@
       "phone": "1-463-123-4447",
       "website": "ramiro.info",
       "profileImg": "https://picsum.photos/150/150?random=3",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=3",
+      "profileCardImg": "https://picsum.photos/450/350?random=3",
       "company": {
         "name": "Romaguera-Jacobson",
         "catchPhrase": "Face to face bifurcated interface",
@@ -90,6 +96,8 @@
       "phone": "493-170-9623 x156",
       "website": "kale.biz",
       "profileImg": "https://picsum.photos/150/150?random=4",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=4",
+      "profileCardImg": "https://picsum.photos/450/350?random=4",
       "company": {
         "name": "Robel-Corkery",
         "catchPhrase": "Multi-tiered zero tolerance productivity",
@@ -114,6 +122,8 @@
       "phone": "(254)954-1289",
       "website": "demarco.info",
       "profileImg": "https://picsum.photos/150/150?random=5",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=5",
+      "profileCardImg": "https://picsum.photos/450/350?random=5",
       "company": {
         "name": "Keebler LLC",
         "catchPhrase": "User-centric fault-tolerant solution",
@@ -138,6 +148,8 @@
       "phone": "1-477-935-8478 x6430",
       "website": "ola.org",
       "profileImg": "https://picsum.photos/150/150?random=6",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=6",
+      "profileCardImg": "https://picsum.photos/450/350?random=6",
       "company": {
         "name": "Considine-Lockman",
         "catchPhrase": "Synchronised bottom-line interface",
@@ -162,6 +174,8 @@
       "phone": "210.067.6132",
       "website": "elvis.io",
       "profileImg": "https://picsum.photos/150/150?random=7",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=7",
+      "profileCardImg": "https://picsum.photos/450/350?random=7",
       "company": {
         "name": "Johns Group",
         "catchPhrase": "Configurable multimedia task-force",
@@ -186,6 +200,8 @@
       "phone": "586.493.6943 x140",
       "website": "jacynthe.com",
       "profileImg": "https://picsum.photos/150/150?random=8",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=8",
+      "profileCardImg": "https://picsum.photos/450/350?random=8",
       "company": {
         "name": "Abernathy Group",
         "catchPhrase": "Implemented secondary concept",
@@ -210,6 +226,8 @@
       "phone": "(775)976-6794 x41206",
       "website": "conrad.com",
       "profileImg": "https://picsum.photos/150/150?random=9",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=9",
+      "profileCardImg": "https://picsum.photos/450/350?random=9",
       "company": {
         "name": "Yost and Sons",
         "catchPhrase": "Switchable contextually-based project",
@@ -234,6 +252,8 @@
       "phone": "024-648-3804",
       "website": "ambrose.net",
       "profileImg": "https://picsum.photos/150/150?random=10",
+      "profileBackdrop": "https://picsum.photos/1920/1080?random=10",
+      "profileCardImg": "https://picsum.photos/450/350?random=10",
       "company": {
         "name": "Hoeger LLC",
         "catchPhrase": "Centralized empowering task-force",

@@ -147,14 +147,100 @@
   color: var(--darker-gray);
 }
 
+/******* POPULAR BLOGGERS ******/
+
 .bloggers-grid {
+  width: 100%;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 .bloggers-grid .bloggers-card {
   border: 1px solid var(--divider);
-  padding: 2rem;
   border-radius: 5px;
+}
+
+.bloggers-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #111;
+  color: var(--accent-color);
+}
+
+.bloggers-card .backdrop-container {
+  width: 100%;
+}
+
+.bloggers-card .backdrop-container img {
+  width: 100%;
+}
+
+.bloggers-card-content {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 2rem;
+}
+
+.bloggers-card-content:before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 0 350px;
+  border-color: transparent transparent transparent #111;
+}
+
+.bloggers-card-content img {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.bloggers-card-content h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.bloggers-card-content a {
+  color: #fff;
+}
+
+.bloggers-card-content p {
+  margin-bottom: 1.2rem;
+}
+
+.bloggers-card-content .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloggers-card-content a:first-of-type {
+  width: 50%;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--primary-color);
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.bloggers-card-content a:last-of-type {
+  width: 50%;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--accent-color);
+  white-space: nowrap;
 }

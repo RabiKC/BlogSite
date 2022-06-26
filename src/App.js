@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "./Pages/Home/Home.jsx";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar.jsx";
-// import Blogs from "./Pages/Blog/Blogs.jsx";
-import Profile from "./Pages/UserProfile/Profile.jsx";
-// import Single from "./Pages/SingleBlog/Single.jsx";
 import { SpinnerCircularFixed } from "spinners-react";
 import { DataProvider } from "./Context/DataContext";
 
+import Navbar from "./Components/Navbar/Navbar.jsx";
 const Home = React.lazy(() => import("./Pages/Home/Home.jsx"));
 const Blogs = React.lazy(() => import("./Pages/Blog/Blogs.jsx"));
 const Single = React.lazy(() => import("./Pages/SingleBlog/Single.jsx"));
+const Profile = React.lazy(() => import("./Pages/UserProfile/Profile.jsx"));
 
 function App() {
   const loader = () => {
@@ -30,30 +27,44 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <DataProvider>
-          <Navbar />
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <React.Suspense fallback={loader()}>
-                  <Home />
-                </React.Suspense>
-              }
-            />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route
-              path="/blogs/:id/:userId"
-              element={
-                <React.Suspense fallback={loader()}>
-                  <Single />
-                </React.Suspense>
-              }
-            />
-            <Route path="/users/:userId/:username" element={<Profile />} />
-          </Routes>
-        </DataProvider>
+        {/* <DataProvider> */}
+        <Navbar />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <React.Suspense fallback={loader()}>
+                <Home />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/blogs"
+            element={
+              <React.Suspense fallback={loader()}>
+                <Blogs />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/blogs/:id/:userId"
+            element={
+              <React.Suspense fallback={loader()}>
+                <Single />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/users/:userId/:username"
+            element={
+              <React.Suspense fallback={loader()}>
+                <Profile />
+              </React.Suspense>
+            }
+          />
+        </Routes>
+        {/* </DataProvider> */}
       </Router>
     </div>
   );
