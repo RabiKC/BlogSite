@@ -55,6 +55,7 @@
 }
 
 .blog-section .user-name {
+  font-size: clamp(1em, 1vw, 1.3em);
   transition: color 200ms ease;
 }
 
@@ -63,7 +64,7 @@
 }
 
 .blog-section .user-detail span {
-  font-size: 0.9rem;
+  font-size: clamp(0.9em, 0.9vw, 1.2em);
   color: var(--gray-color);
 }
 
@@ -114,14 +115,14 @@
 }
 .user-dropdown-items .top-half a:last-child {
   white-space: nowrap;
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.1vw, 1.5em);
 }
 .user-dropdown-items .bottom-half p {
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.8vw, 1.1em);
 }
 
 .user-dropdown-items .bottom-half a {
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.8vw, 1.1em);
   text-decoration: underline;
   text-align: right;
 }
@@ -139,7 +140,7 @@
 }
 
 .blog-content .blog-title {
-  font-size: 2.5rem;
+  font-size: clamp(2.4rem, 2.4vw, 6rem);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -147,7 +148,7 @@
 .blog-content .blog-subtitle {
   color: var(--gray-color);
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: clamp(1.3rem, 1.3vw, 1.8em);
   margin-bottom: 3rem;
 }
 
@@ -248,14 +249,14 @@
 }
 
 .sidebar-user-detail p {
-  font-size: 0.85rem;
+  font-size: clamp(0.85rem, 0.85vw, 1.4em);
   font-weight: 500;
   color: var(--darker-gray);
 }
 
 .sidebar-user-detail > a {
   width: 100%;
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.9vw, 1.5em);
   text-decoration: underline;
   color: var(--darker-gray);
   text-align: right;
@@ -266,7 +267,7 @@
 }
 
 .sidebar-blogs-content > h1 {
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.4vw, 2em);
   text-align: left;
   margin-bottom: 0.6rem;
   font-weight: 600;
@@ -278,7 +279,7 @@
 }
 
 .sidebar-single-content h2 {
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.1vw, 1.8em);
   margin-bottom: 0.8rem;
   line-height: 1.2;
   font-weight: 500;
@@ -291,7 +292,7 @@
 
 .sidebar-single-content p {
   color: var(--darker-gray);
-  font-size: 0.85rem;
+  font-size: clamp(0.85rem, 0.85vw, 1.4em);
   text-align: justify;
 }
 
@@ -304,7 +305,7 @@
 }
 
 .comment-title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 2vw, 4em);
   margin-bottom: 2rem;
 }
 
@@ -321,7 +322,7 @@
   padding: 2rem;
   outline: none;
   border: 1px solid var(--divider);
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 1.5em);
 }
 
 textarea:focus {
@@ -371,7 +372,7 @@ textarea:focus {
 }
 
 .single-comment .username {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.9vw, 1.5em);
   color: var(--secondary-color);
   transition: color 200ms ease;
 }
