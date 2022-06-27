@@ -51,7 +51,7 @@ const CommentSection = ({ postId }) => {
   };
 
   const removeMessage = () => {
-    setMessage(null);
+    setMessage("");
   };
 
   if (message) {
