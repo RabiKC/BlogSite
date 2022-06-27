@@ -18,11 +18,15 @@ const Sidebar = ({ user }) => {
       </div>
       {user && (
         <div className="sidebar-user-detail">
-          <Link to={userLink}>
-            <img src={user.profileImg} alt="" />
-          </Link>
-          <p>{user.name}</p>
-          <span>303 Followers</span>
+          <div className="details-top">
+            <Link to={userLink} className="profile-img">
+              <img src={user.profileImg} alt={user.name} />
+            </Link>
+            <Link to={userLink} className="username">
+              {user.name}
+            </Link>
+            <span>303 Followers</span>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             qui molestiae cupiditate esse. Ad qui nisi ut blanditiis totam cum.

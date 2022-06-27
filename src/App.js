@@ -14,13 +14,14 @@ function App() {
   const loader = () => {
     return (
       <div className="loading-section">
-        <SpinnerCircularFixed
+        {/* <SpinnerCircularFixed
           size={68}
           thickness={136}
           speed={139}
           color="rgba(58, 123, 153, 1)"
           secondaryColor="rgba(0, 0, 0, 0.44)"
-        />
+        /> */}
+        <h1>Loading...</h1>
       </div>
     );
   };
