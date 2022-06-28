@@ -140,7 +140,7 @@
 }
 
 .blog-content .blog-title {
-  font-size: clamp(2.4rem, 2.2vw, 8rem);
+  font-size: clamp(2.4rem, 2.2vw, 7.2rem);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -148,7 +148,7 @@
 .blog-content .blog-subtitle {
   color: var(--gray-color);
   font-weight: 500;
-  font-size: clamp(1.3rem, 1.1vw, 4em);
+  font-size: clamp(1.25rem, 1.1vw, 3.7rem);
   margin-bottom: 3rem;
 }
 
@@ -242,23 +242,21 @@
 
 .sidebar-user-detail .username {
   width: 100%;
-  font-size: clamp(1rem, 0.9vw, 3.1rem);
 }
 
 .sidebar-user-detail span {
   color: var(--darker-gray);
-  font-size: clamp(1rem, 0.9vw, 3.1rem);
 }
 
 .sidebar-user-detail p {
-  font-size: clamp(0.85rem, 0.75vw, 2.9em);
+  font-size: clamp(0.85rem, 0.75vw, 2.5em);
   font-weight: 500;
   color: var(--darker-gray);
 }
 
 .sidebar-user-detail > a {
   width: 100%;
-  font-size: clamp(0.9rem, 0.8vw, 2.8em);
+  font-size: clamp(0.9rem, 0.8vw, 2.7em);
   text-decoration: underline;
   color: var(--darker-gray);
   text-align: right;
@@ -281,7 +279,7 @@
 }
 
 .sidebar-single-content h2 {
-  font-size: clamp(1.1rem, 1vw, 3.8em);
+  font-size: clamp(1.1rem, 1.05vw, 3.5rem);
   margin-bottom: 0.8rem;
   line-height: 1.2;
   font-weight: 500;
@@ -294,7 +292,7 @@
 
 .sidebar-single-content p {
   color: var(--darker-gray);
-  font-size: clamp(0.85rem, 0.75vw, 2.8em);
+  font-size: clamp(0.85rem, 0.75vw, 2.6rem);
   text-align: justify;
 }
 
@@ -307,7 +305,7 @@
 }
 
 .comment-title {
-  font-size: clamp(2rem, 2vw, 5.5em);
+  font-size: clamp(2.2rem, 2vw, 5.5rem);
   margin-bottom: 2rem;
 }
 
@@ -384,7 +382,7 @@ textarea:focus {
 }
 
 .single-comment .username {
-  font-size: clamp(0.9rem, 0.8vw, 2.8em);
+  font-size: clamp(0.9rem, 0.85vw, 2.7rem);
   color: var(--secondary-color);
   transition: color 200ms ease;
 }

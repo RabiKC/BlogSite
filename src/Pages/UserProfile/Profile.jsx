@@ -33,18 +33,34 @@ const Profile = () => {
   return (
     <main className="profile-page">
       {user && (
-        <section
-          className="section user-detail-section"
-          style={{
-            background: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(${user.profileBackdrop})`,
-          }}
-        >
-          <div className="section-wrapper backdrop-wrapper">
-            <div>
-              <h1>{user.name}</h1>
-            </div>
-          </div>
-        </section>
+        <>
+          <section className="user-profile-section">
+            <section
+              className="section backdrop-section"
+              style={{
+                background: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(${user.profileBackdrop})`,
+              }}
+            ></section>
+            <section className="user-info-section">
+              <div className="section-wrapper profile-wrapper">
+                <div className="profile-left">
+                  <img
+                    src={user.profileCardImg}
+                    alt={user.name}
+                    className="profile-img"
+                  />
+                </div>
+                <div className="profile-right">
+                  <h1 className="profile-name">{user.name}</h1>
+                  <h2 className="profile-username">{user.username}</h2>
+                  <h3>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  </h3>
+                </div>
+              </div>
+            </section>
+          </section>
+        </>
       )}
     </main>
   );

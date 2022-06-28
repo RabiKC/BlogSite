@@ -22,6 +22,11 @@
 a {
   color: #000;
   text-decoration: none;
+  font-size: clamp(1rem, 0.9vw, 3rem);
+}
+
+span {
+  font-size: clamp(1rem, 0.9vw, 3rem);
 }
 
 li {
@@ -36,17 +41,18 @@ li {
 .section-wrapper {
   width: 75%;
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 .section-title {
-  font-size: clamp(2.1rem, 2.2vw, 5rem);
-  margin-bottom: 2rem;
+  font-size: clamp(2.2rem, 2.1vw, 4.5rem);
+  margin-bottom: clamp(2rem, 2vw, 5rem);
   position: relative;
 }
 
 p {
   line-height: 1.6;
-  font-size: clamp(1rem, 0.8vw, 3rem);
+  font-size: clamp(1rem, 0.9vw, 3rem);
 }
 
 h1,
@@ -72,4 +78,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 2500px) {
+  p {
+    line-height: 33px;
+  }
 }

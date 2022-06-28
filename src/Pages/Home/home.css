@@ -32,7 +32,7 @@
 
 .hero-title {
   color: var(--accent-color);
-  font-size: 3.5rem;
+  font-size: clamp(3.3rem, 3.2vw, 8rem);
   margin-bottom: 3rem;
 }
 
@@ -64,7 +64,7 @@
 .post-card h2 {
   margin-bottom: 1.2rem;
   font-weight: 600;
-  font-size: clamp(1.2em, 1.1vw, 4rem);
+  font-size: clamp(1.2em, 1.2vw, 3.6rem);
   transition: color 200ms ease;
 }
 
@@ -89,34 +89,9 @@
   gap: 0.6rem;
 }
 
-/* .post-card .user-info {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.6rem;
-  position: absolute;
-  bottom: 28%;
-  background-color: rgba(58, 123, 153, 0.6);
-  padding: 0.3rem 0.6rem;
-  border-radius: 0 5px 5px 0;
-  color: var(--accent-color);
-  transition: background 200ms ease;
-}
-
-.post-card .user-info:hover {
-  background-color: rgba(58, 123, 153, 1);
-  color: aliceblue;
-} 
-
-.post-card .user-name:hover {
-  color: var(--accent-color);
-}
-*/
-
 .post-card .user-name {
   transition: color 200ms ease;
-  font-size: clamp(0.9rem, 0.8vw, 2.5rem);
+  font-size: clamp(0.9rem, 0.8vw, 2.7rem);
 }
 
 .post-card .user-name:hover {
@@ -145,6 +120,7 @@
 
 .post-card .posts-desc {
   color: var(--darker-gray);
+  /* font-size: 1rem  ; */
 }
 
 /******* POPULAR BLOGGERS ******/
@@ -153,7 +129,7 @@
   width: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
 }
 
@@ -211,7 +187,7 @@
 }
 
 .bloggers-card-content h2 {
-  font-size: clamp(1.2em, 1.1vw, 4rem);
+  font-size: clamp(1.2rem, 1.2vw, 3.6rem);
   font-weight: 500;
   text-align: center;
   margin-bottom: 1.2rem;
