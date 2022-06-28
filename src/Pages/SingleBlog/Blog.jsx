@@ -128,7 +128,6 @@ const Blog = ({ user, blog }) => {
             sunt similique aperiam cumque.
           </p>
         </div>
-        {blog.body}
       </div>
     </section>
   );

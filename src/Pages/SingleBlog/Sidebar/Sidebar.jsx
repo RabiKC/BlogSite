@@ -31,7 +31,7 @@ const Sidebar = ({ user }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             qui molestiae cupiditate esse. Ad qui nisi ut blanditiis totam cum.
           </p>
-          <a href="#">{user.website}</a>
+          <a href="google.com">{user.website}</a>
         </div>
       )}
 

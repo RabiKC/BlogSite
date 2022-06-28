@@ -39,14 +39,14 @@ li {
 }
 
 .section-title {
-  font-size: clamp(2em, 2.2vw, 6rem);
+  font-size: clamp(2.1rem, 2.2vw, 5rem);
   margin-bottom: 2rem;
   position: relative;
 }
 
 p {
   line-height: 1.6;
-  font-size: clamp(1em, 1vw, 1.4em);
+  font-size: clamp(1rem, 0.8vw, 3rem);
 }
 
 h1,
