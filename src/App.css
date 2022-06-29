@@ -17,6 +17,8 @@
   --divider: rgb(220, 220, 220);
   --gray-color: rgb(180, 180, 180);
   --darker-gray: rgb(155, 155, 155);
+  --grayish-text: rgb(210, 210, 210);
+  --white-text: rgb(235, 235, 235);
 }
 
 a {
@@ -31,6 +33,12 @@ span {
 
 li {
   list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .section {
