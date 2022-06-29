@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import SingleContent from "./SingleContent";
 
-const MoreContent = () => {
+const MoreContent = ({ setLoading }) => {
   const postUrl = `http://localhost:8000/posts`;
   const [posts, setPosts] = useState([]);
 
   const getPosts = () => {
+    setLoading(true);
     fetch(postUrl)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setPosts(data);
       });
+    setLoading(false);
   };
 
   useEffect(() => {

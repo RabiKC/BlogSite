@@ -57,12 +57,12 @@ const Single = () => {
   return (
     <>
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div className="loading-section">Loading...</div>
       ) : user && blog ? (
         <main className="single-blog-page">
-          <Blog user={user} blog={blog} />
-          <Sidebar user={user} />
-          <CommentSection postId={postId} />
+          <Blog user={user} blog={blog} setLoading={setLoading} />
+          <Sidebar user={user} setLoading={setLoading} />
+          <CommentSection postId={postId} setLoading={setLoading} />
         </main>
       ) : (
         <h1>Error</h1>

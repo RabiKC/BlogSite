@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import UserDetail from "./UserDetail";
 import axios from "axios";
 
-const Blog = ({ user, blog }) => {
+const Blog = ({ user, blog, setLoading }) => {
   const [images, setImages] = useState(null);
   const imagesUrl = "http://localhost:8000/images";
 
   const getImages = async () => {
+    setLoading(true);
     try {
       await axios.get(imagesUrl).then((res) => setImages(res.data));
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 

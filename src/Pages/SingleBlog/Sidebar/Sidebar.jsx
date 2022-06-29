@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import MoreContent from "./MoreContent";
 
-const Sidebar = ({ user }) => {
+const Sidebar = ({ user, setLoading }) => {
   const userLink = `/users/${user.id}/${user.username}`;
 
   return (
@@ -31,11 +31,10 @@ const Sidebar = ({ user }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             qui molestiae cupiditate esse. Ad qui nisi ut blanditiis totam cum.
           </p>
-          <a href="google.com">{user.website}</a>
+          <a href="https://www.google.com">{user.website}</a>
         </div>
       )}
-
-      <MoreContent />
+      <MoreContent setLoading={setLoading} />
     </aside>
   );
 };

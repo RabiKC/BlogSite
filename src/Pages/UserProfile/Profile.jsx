@@ -97,7 +97,7 @@ const Profile = () => {
               <section className="profile-posts">
                 <div className="section-wrapper profile-section">
                   <Sidebar user={user} />
-                  <Main user={user} />
+                  <Main user={user} setLoading={setLoading} />
                 </div>
               </section>
             </>
