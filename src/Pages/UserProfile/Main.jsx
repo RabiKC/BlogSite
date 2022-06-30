@@ -33,16 +33,17 @@ const Main = ({ user, setLoading }) => {
     <div className="main-profile-section">
       <div className="user-posts">
         <h1 className="title">Posts by {user.name}</h1>
-        {userPosts &&
-          userPosts.map((u, i) => (
-            <>
+        <div className="cards-container">
+          {userPosts &&
+            userPosts.map((u, i) => (
               <div className="card">
                 <Link to={`/blogs/${u.id}/${user.id}`}>
-                  <h1>{u.title}</h1>
+                  <h2>{u.title}</h2>
+                  <p>{u.body}</p>
                 </Link>
               </div>
-            </>
-          ))}
+            ))}
+        </div>
       </div>
     </div>
   );

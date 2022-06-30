@@ -134,4 +134,27 @@
 
 .main-profile-section .title {
   font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-profile-section .cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+
+.main-profile-section .card {
+  width: 80%;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.main-profile-section .card h2 {
+  margin-bottom: 1rem;
+}
+
+.main-profile-section .card p {
+  color: var(--darker-gray);
 }
