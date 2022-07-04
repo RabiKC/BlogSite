@@ -128,8 +128,9 @@
 }
 
 .main-profile-section {
+  border-right: 1px solid var(--divider);
   border-left: 1px solid var(--divider);
-  padding: 0 2rem;
+  padding: 0 8rem;
 }
 
 .main-profile-section .title {
@@ -145,14 +146,46 @@
   /* gap: 1rem; */
 }
 
+.main-profile-section {
+  font-size: 4rem;
+}
+
 .main-profile-section .card {
-  width: 80%;
+  width: 100%;
   padding: 1rem 0;
   border-bottom: 1px solid var(--divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap-reverse; */
+  gap: 1rem;
+}
+
+/* .main-profile-section .card a:first-of-type {
+  flex-basis: 60%;
+} */
+
+.main-profile-section .card a:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-basis: 40%; */
+}
+
+.main-profile-section .card img {
+  width: 200px;
+  aspect-ratio: 1.5/1;
 }
 
 .main-profile-section .card h2 {
   margin-bottom: 1rem;
+  font-size: clamp(1.3rem, 1.1vw, 3.3rem);
+}
+
+.main-profile-section .card p {
+  font-size: clamp(0.9rem, 0.8vw, 2.7rem);
+  width: 100%;
+  max-width: 70ch;
 }
 
 .main-profile-section .card p {

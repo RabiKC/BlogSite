@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Main = ({ user, setLoading }) => {
   const postUrl = "http://localhost:8000/posts";
+  const imgsUrl = "http://localhost:8000/images";
   const [posts, setPosts] = useState([]);
 
   const getPosts = () => {
@@ -19,15 +20,29 @@ const Main = ({ user, setLoading }) => {
     }
   };
 
+  // const getImgs = () => {
+  //   try {
+  //     const response = async () => {
+  //       setLoading(true);
+  //       await fetch(imgsUrl)
+  //         .then((res) => res.json())
+  //         .then((data) => setImages(data));
+
+  //       setLoading(false);
+  //     };
+  //   } catch (error) {
+  //     setLoading(true);
+  //     console.log(error);
+  //     setLoading(false);
+  //   }
+  // };
+
   useEffect(() => {
     getPosts();
   }, []);
 
   const userPosts =
     posts && posts.filter((p) => p.userId === user.id).reverse();
-
-  console.log(posts && posts.map((p) => p.userId));
-  console.log(userPosts && userPosts);
 
   return (
     <div className="main-profile-section">
@@ -40,6 +55,12 @@ const Main = ({ user, setLoading }) => {
                 <Link to={`/blogs/${u.id}/${user.id}`}>
                   <h2>{u.title}</h2>
                   <p>{u.body}</p>
+                </Link>
+                <Link to={`/blogs/${u.id}/${user.id}`}>
+                  <img
+                    src={`https://picsum.photos/535/300?random=${u.id}`}
+                    alt={user.name}
+                  />
                 </Link>
               </div>
             ))}

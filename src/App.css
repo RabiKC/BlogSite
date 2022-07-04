@@ -24,7 +24,7 @@
 a {
   color: #000;
   text-decoration: none;
-  font-size: clamp(1rem, 0.9vw, 3rem);
+  font-size: clamp(1rem, 0.85vw, 3rem);
 }
 
 span {
@@ -53,14 +53,14 @@ button {
 }
 
 .section-title {
-  font-size: clamp(2.2rem, 2.1vw, 4.5rem);
+  font-size: clamp(2.2rem, 1.9vw, 4.5rem);
   margin-bottom: clamp(2rem, 2vw, 5rem);
   position: relative;
 }
 
 p {
   line-height: 1.6;
-  font-size: clamp(1rem, 0.9vw, 3rem);
+  font-size: clamp(1rem, 0.85vw, 3rem);
 }
 
 h1,

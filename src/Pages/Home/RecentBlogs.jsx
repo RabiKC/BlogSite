@@ -4,9 +4,8 @@ import ContentCard from "./ContentCard";
 
 const postUrl = "http://localhost:8000/posts";
 
-const RecentBlogs = () => {
+const RecentBlogs = ({ setLoading }) => {
   const [recent, setRecent] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const recentBlogs = async () => {
     setLoading(true);
@@ -30,26 +29,18 @@ const RecentBlogs = () => {
   const shuffled = recent && recent.sort(() => 0.5 - Math.random()).slice(0, 4);
 
   return (
-    <>
-      {loading ? (
-        <div className="loading">Loading...</div>
-      ) : (
-        <section className="popular-blogs section">
-          <div className="section-wrapper">
-            <h1 className="section-title">Recent Posts</h1>
-            <div className="recent-grid-section">
-              {shuffled ? (
-                shuffled
-                  // .slice(recent.length - 4, recent.length)
-                  .map((r, i) => <ContentCard content={r} key={i} />)
-              ) : (
-                <h2 className="no-post">No Recent Posts</h2>
-              )}
-            </div>
-          </div>
-        </section>
-      )}
-    </>
+    <section className="popular-blogs section">
+      <div className="section-wrapper">
+        <h1 className="section-title">Recent Posts</h1>
+        <div className="recent-grid-section">
+          {shuffled ? (
+            shuffled.map((r, i) => <ContentCard content={r} key={i} />)
+          ) : (
+            <h2 className="no-post">No Recent Posts</h2>
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 

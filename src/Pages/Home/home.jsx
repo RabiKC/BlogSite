@@ -47,9 +47,9 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <RecentBlogs />
-          <PopularBlogs />
-          <PopularBloggers />
+          <RecentBlogs setLoading={setLoading} />
+          <PopularBlogs setLoading={setLoading} />
+          <PopularBloggers setLoading={setLoading} />
         </main>
       )}
     </>

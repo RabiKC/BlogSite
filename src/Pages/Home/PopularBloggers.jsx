@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const PopularBloggers = () => {
+const PopularBloggers = ({ setLoading }) => {
   const usersUrl = "http://localhost:8000/users";
 
   const [users, setUsers] = useState(null);
 
   const getUsers = () => {
+    setLoading(true);
     try {
       fetch(usersUrl)
         .then((res) => res.json())
         .then((data) => setUsers(data));
+
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
