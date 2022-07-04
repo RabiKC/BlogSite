@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Main = ({ user, setLoading }) => {
   const postUrl = "http://localhost:8000/posts";
-  const imgsUrl = "http://localhost:8000/images";
   const [posts, setPosts] = useState([]);
 
   const getPosts = () => {

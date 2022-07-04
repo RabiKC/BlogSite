@@ -10,11 +10,14 @@ import Sidebar from "./Sidebar";
 import Main from "./Main";
 
 import "./profile.css";
+import Album from "./Album";
 
 const Profile = () => {
   const usersUrl = "http://localhost:8000/users";
+  const albumUrl = "http://localhost:8000/albums";
 
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
+  const [albums, setAlbums] = useState([]);
   const [loading, setLoading] = useState(false);
   const { userId } = useParams();
 
@@ -31,13 +34,26 @@ const Profile = () => {
     }
   };
 
+  const getAlbums = () => {
+    setLoading(true);
+    try {
+      fetch(albumUrl)
+        .then((res) => res.json())
+        .then((data) => setAlbums(data));
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     getUsers();
+    getAlbums();
   }, []);
 
   const user = users && users.find((u) => u.id === parseInt(userId));
-
-  user && console.log(user);
+  const userAlbum = albums.filter((a) => a.userId === parseInt(userId));
 
   return (
     <>
@@ -99,6 +115,7 @@ const Profile = () => {
                   <Sidebar user={user} />
                   <Main user={user} setLoading={setLoading} />
                 </div>
+                <Album userAlbum={userAlbum} setLoading={setLoading} />
               </section>
             </>
           )}
