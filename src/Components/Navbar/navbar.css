@@ -1,7 +1,6 @@
 .page-header {
   width: 100%;
-  min-height: 75px;
-  max-height: 150px;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,17 +8,24 @@
 }
 
 .page-navbar {
-  width: 70%;
-  height: 75px;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .page-logo a {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--primary-color);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-logo img {
+  width: 55px;
+  height: 55px;
 }
 
 .nav-links {

@@ -14,15 +14,16 @@
   --secondary-color: #70afce;
   --tertiary-color: #a5def1;
   --accent-color: #fff;
-  --divider: rgb(220, 220, 220);
-  --gray-color: rgb(180, 180, 180);
-  --darker-gray: rgb(155, 155, 155);
+  --darker-gray: rgb(140, 140, 140);
+  --gray-color: rgb(170, 170, 170);
   --grayish-text: rgb(210, 210, 210);
-  --white-text: rgb(238, 238, 238);
+  --white-text: rgb(242, 242, 242);
+  --black-text: rgb(30, 30, 30);
+  --divider: rgb(220, 220, 220);
 }
 
 a {
-  color: #000;
+  color: var(--black-text);
   text-decoration: none;
   font-size: clamp(1rem, 0.85vw, 3rem);
 }
@@ -39,6 +40,11 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+section,
+main {
+  max-width: 1920px;
 }
 
 .section {
@@ -61,6 +67,14 @@ button {
 p {
   line-height: 1.6;
   font-size: clamp(1rem, 0.85vw, 3rem);
+  /* text-align: center; */
+}
+
+p,
+h1,
+h2,
+h3 {
+  max-width: 60ch;
 }
 
 h1,

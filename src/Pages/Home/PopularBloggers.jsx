@@ -35,20 +35,23 @@ const PopularBloggers = ({ setLoading }) => {
             randomUser.map((r, i) => (
               <div className="bloggers-card" key={i}>
                 <div className="backdrop-container">
-                  <img src={r.profileCardImg} alt="" />
+                  <img src={r.profileCardImg} alt={r.name} />
                 </div>
                 <div className="bloggers-card-content">
                   <img src={r.profileImg} alt={r.name} />
-                  <h2> {r.name}</h2>
+                  <Link
+                    to={`/users/${r.id}/${r.username}`}
+                    className="profile-link"
+                  >
+                    <h2> {r.name}</h2>
+                  </Link>
                   <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
                     distinctio molestias perspiciatis?
                   </p>
                   <div className="links">
-                    <Link to="#" c>
-                      Follow
-                    </Link>
-                    <Link to="#">More Info</Link>
+                    <Link to={`/users/${r.id}/${r.username}`}>Follow</Link>
+                    <Link to={`/users/${r.id}/${r.username}`}>More Info</Link>
                   </div>
                 </div>
               </div>

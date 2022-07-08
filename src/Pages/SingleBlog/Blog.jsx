@@ -48,7 +48,7 @@ const Blog = ({ user, blog, setLoading }) => {
             assumenda sunt. Quis eaque nesciunt dicta quae modi eveniet natus ut
             officia totam maiores inventore nulla dignissimos, quidem illo
             deserunt harum est numquam accusantium veritatis voluptatem vero
-            nostrum non incidunt? Qui commodi laborum nisi aperiam.
+            nostrum non incidunt?
           </p>
           <img src={randomImg && randomImg[1].link} alt="Blogs" />
           <p>
@@ -62,11 +62,7 @@ const Blog = ({ user, blog, setLoading }) => {
             eius odit minus? Eligendi accusantium perferendis modi nemo id
             inventore illum minus mollitia, corrupti voluptate vel eum
             voluptatum repudiandae cupiditate cum saepe ducimus voluptatem
-            temporibus consectetur quidem ipsa pariatur at? Itaque consequatur
-            soluta autem et ducimus sed aspernatur molestias quis ratione sunt
-            nemo laboriosam voluptatibus repellendus unde optio praesentium
-            nulla suscipit reiciendis officia minus possimus, deleniti
-            necessitatibus inventore at! Blanditiis, pariatur impedit.
+            temporibus consectetur quidem ipsa pariatur at?
           </p>
           <img src={randomImg && randomImg[2].link} alt="Blogs" />
           <p>
@@ -75,15 +71,7 @@ const Blog = ({ user, blog, setLoading }) => {
             doloremque commodi et dolorum vero. Assumenda hic dolore ratione
             culpa! Natus, animi ex delectus odit illo itaque facere soluta cum
             voluptates repellendus. Officia, placeat fuga eligendi corporis
-            minima expedita eaque libero explicabo quae itaque. Architecto rem
-            aliquam est totam soluta numquam, qui repellendus reprehenderit
-            reiciendis optio sunt voluptatem repellat asperiores iusto? Mollitia
-            minima nostrum molestiae quasi, dignissimos veritatis dolore odio
-            repellendus provident harum facere ut iure rem voluptatum sequi
-            commodi quidem maxime hic ipsam iusto qui, molestias praesentium. A
-            eos saepe odit? Ab molestiae et repudiandae.Aspernatur, labore
-            facere odit repudiandae aperiam voluptates vitae, quidem, delectus
-            sint beatae excepturi.
+            minima expedita eaque libero explicabo quae itaque.
           </p>
           <img src={randomImg && randomImg[3].link} alt="Blogs" />
           <p>
@@ -105,8 +93,6 @@ const Blog = ({ user, blog, setLoading }) => {
             molestiae ex maxime molestias at! Obcaecati, eligendi provident!
             Architecto deserunt ea, adipisci voluptatem explicabo corporis
             aliquam, ipsam minima at facere voluptatibus vel error aspernatur!
-            Ad officiis officia nostrum veritatis hic laborum accusamus rerum
-            perspiciatis aliquid molestiae.
           </p>
           <img src={randomImg && randomImg[4].link} alt="Blogs" />
           <p>
@@ -118,9 +104,6 @@ const Blog = ({ user, blog, setLoading }) => {
             tempore asperiores cupiditate aspernatur et. Ut quaerat veritatis,
             autem provident voluptatem aut nisi enim eum cupiditate repellat,
             tempore eveniet, atque aliquid obcaecati omnis ipsa illum ea nobis?
-            Voluptatibus consectetur incidunt recusandae dolorem ipsa quisquam
-            a, necessitatibus nihil aperiam quas fugiat error sequi hic minima
-            corporis porro eveniet culpa maxime dolor assumenda.
           </p>
 
           <p>

@@ -39,12 +39,12 @@ const CommentSection = ({ postId }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-
       setLoading(false);
-      setMessage("Your comment has succesfully been posted");
+
       setUserComment("");
       e.target.reset();
       getComments();
+      setMessage("Your comment has been successfully posted");
     } else {
       setMessage("Please type something to post");
     }
@@ -59,6 +59,7 @@ const CommentSection = ({ postId }) => {
       setMessage("");
     }, 4000);
   }
+
   const postComment = comments && comments.filter((p) => p.postId === postId);
 
   return (

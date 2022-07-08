@@ -25,6 +25,7 @@ const ContentCard = ({ content }) => {
 
   const postUser = user && user.find(({ id }) => id === content.userId);
   const userLink = postUser && `users/${postUser.id}/${postUser.username}`;
+
   const postLink = `blogs/${content.id}/${content.userId}`;
 
   return (
@@ -50,9 +51,11 @@ const ContentCard = ({ content }) => {
               {/* </div> */}
             </>
           )}
-
-          <p className="posts-desc">{content.body.substring(0, 101)}</p>
+          <p className="posts-desc">{content.body.substring(0, 90)}...</p>
         </div>
+        <Link to={postLink} className="read-more-link">
+          Read more
+        </Link>
       </div>
     </div>
   );

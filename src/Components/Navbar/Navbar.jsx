@@ -7,7 +7,10 @@ const Navbar = () => {
     <header className="page-header">
       <div className="page-navbar">
         <div className="page-logo">
-          <NavLink to="/">BlogSpot</NavLink>
+          <NavLink to="/">
+            {/* Leckerli One  */}
+            <img src="android-chrome-512x512.png" alt="" />
+          </NavLink>
         </div>
         <ul className="nav-links">
           <li className="nav-link">

@@ -26,25 +26,15 @@ const Home = () => {
             }}
           >
             <div className="section-wrapper hero-wrapper">
-              <div className="hero-left">
+              <div className="hero-content">
                 <h1 className="hero-title">Post Your Blogs Here</h1>
+                <h2>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt eveniet animi error veniam facilis culpa? Quia.
+                </h2>
                 <Link to="/blogs">Explore</Link>
               </div>
-              <div className="hero-right">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Repellat quis asperiores libero minus repellendus esse odit ex
-                  quae distinctio possimus animi sint ratione sunt cupiditate
-                  iste ut aliquid nostrum incidunt laborum, repudiandae corrupti
-                  commodi reiciendis voluptatum. Sapiente mollitia perferendis
-                  neque ab dicta quibusdam, maxime rem dolorum beatae doloribus.
-                  Necessitatibus cumque repellendus libero iusto eveniet et
-                  nesciunt nobis, molestias laborum unde illum nulla a,
-                  distinctio atque recusandae. Explicabo, aperiam sapiente aut
-                  dolorum, odit debitis repellat, veritatis modi doloribus
-                  blanditiis magnam molestias!
-                </p>
-              </div>
+              <div className="hero-right"></div>
             </div>
           </section>
           <RecentBlogs setLoading={setLoading} />

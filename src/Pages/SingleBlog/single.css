@@ -1,5 +1,5 @@
 .single-blog-page {
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.7fr 0.3fr;
@@ -159,6 +159,7 @@
 .blog-texts p {
   line-height: 30px;
   text-align: justify;
+  margin: auto;
 }
 
 .blog-texts img,
