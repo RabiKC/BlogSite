@@ -9,10 +9,10 @@ const Sidebar = ({ user, setLoading }) => {
   return (
     <aside className="single-blog-sidebar">
       <div className="get-started">
-        <Link to="#" className="get-started-link">
+        <Link to="/sign-up" className="get-started-link">
           Get Started
         </Link>
-        <Link to="#" className="sign-in-link">
+        <Link to="/sign-in" className="sign-in-link">
           Sign in
         </Link>
       </div>

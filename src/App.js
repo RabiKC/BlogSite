@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { SpinnerCircularFixed } from "spinners-react";
-import { DataProvider } from "./Context/DataContext";
+// import { SpinnerCircularFixed } from "spinners-react";
+// import { DataProvider } from "./Context/DataContext";
 
 import Navbar from "./Components/Navbar/Navbar.jsx";
 const Home = React.lazy(() => import("./Pages/Home/Home.jsx"));
 const Blogs = React.lazy(() => import("./Pages/Blog/Blogs.jsx"));
 const Single = React.lazy(() => import("./Pages/SingleBlog/Single.jsx"));
 const Profile = React.lazy(() => import("./Pages/UserProfile/Profile.jsx"));
+const SignIn = React.lazy(() => import("./Pages/SignIn"));
+const SignUp = React.lazy(() => import("./Pages/SignUp"));
 
 function App() {
   const loader = () => {
@@ -61,6 +63,22 @@ function App() {
             element={
               <React.Suspense fallback={loader()}>
                 <Profile />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/sign-in"
+            element={
+              <React.Suspense fallback={loader()}>
+                <SignIn />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/sign-up"
+            element={
+              <React.Suspense fallback={loader()}>
+                <SignUp />
               </React.Suspense>
             }
           />
