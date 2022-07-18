@@ -9,7 +9,6 @@ form {
 }
 
 .form-wrapper {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +23,7 @@ form {
 .input-wrapper {
   position: relative;
   width: fit-content;
+  isolation: isolate;
 }
 
 .input-wrapper label {
@@ -34,17 +34,27 @@ form {
   color: var(--darker-gray);
   background-color: #fff;
   pointer-events: none;
+  transition: all 250ms ease-in-out;
+  padding: 0.1rem 0.25rem;
 }
 
 input {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: 1px solid var(--divider);
+  background-color: transparent;
 }
 
-.input-wrapper:focus .input-wrapper label {
-  top: 0%;
+.input-wrapper input:focus + label,
+.input-wrapper input:valid + label {
+  transform: translateY(-150%);
   font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.input-wrapper input:focus {
+  outline: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .form-wrapper input[type="submit"] {

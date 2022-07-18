@@ -10,15 +10,18 @@ const Form = () => {
       <h1>Sign-In </h1>
       <form onSubmit={onSubmit}>
         <div className="input-wrapper">
-          <input type="text" />
-          <label>Username</label>
+          <input type="text" name="username" id="username" required />
+          <label for="username">Username</label>
         </div>
         <div className="input-wrapper">
-          <input type="password" name="password" id="password" />
-          <label> Password</label>
+          <input type="password" name="password" id="password" required />
+          <label for="password"> Password</label>
         </div>
         <input type="submit" value="Sign-In" />
       </form>
+
+      <span>Forgot password?</span>
+      <span>Don't have an account?</span>
     </div>
   );
 };
