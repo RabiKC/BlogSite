@@ -1,11 +1,18 @@
-form {
-  width: 40%;
-  margin: auto;
+.sign-in-page {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+}
+
+.sign-in-page .background {
+  width: 60%;
+  height: 100vh;
+  background-image: url(https://picsum.photos/720/1280?random=50);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .form-wrapper {
@@ -13,6 +20,9 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 40%;
+  height: 100%;
+  padding: 0 2rem;
 }
 
 .form-wrapper h1 {
@@ -20,16 +30,28 @@ form {
   font-size: clamp(2.2em, 1.8vw + 0.4em, 5em);
 }
 
+.form-wrapper form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
 .input-wrapper {
   position: relative;
   width: fit-content;
   isolation: isolate;
+  width: 80%;
 }
 
 .input-wrapper label {
   position: absolute;
   top: 50%;
-  left: 6%;
+  left: 3%;
   transform: translateY(-50%);
   color: var(--darker-gray);
   background-color: #fff;
@@ -38,11 +60,12 @@ form {
   padding: 0.1rem 0.25rem;
 }
 
-input {
-  padding: 0.5rem 1rem;
+.input-wrapper input {
+  padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border: 1px solid var(--divider);
   background-color: transparent;
+  width: 100%;
 }
 
 .input-wrapper input:focus + label,
@@ -57,6 +80,29 @@ input {
   border: 1px solid var(--secondary-color);
 }
 
+.form-wrapper .extra-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.form-wrapper .remember-me-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.form-wrapper input[type="checkbox"] {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+.form-wrapper .forgot-password {
+  color: var(--primary-color);
+}
+
 .form-wrapper input[type="submit"] {
   padding: 1rem 3rem;
   border: none;
@@ -66,10 +112,66 @@ input {
   color: var(--white-text);
   cursor: pointer;
   transition: background 250ms ease-in-out;
+  font-size: 1rem;
 }
 
 .form-wrapper input[type="submit"]:hover {
   background-color: var(--secondary-color);
   color: var(--white-text);
   cursor: pointer;
+}
+
+.form-wrapper .signup-link {
+  display: inline-block;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+.or-divider {
+  color: var(--divider);
+  position: relative;
+  margin-top: 1rem;
+}
+
+.or-divider::before {
+  content: "";
+  width: 500%;
+  height: 1px;
+  background-color: var(--divider);
+  position: absolute;
+  right: 110%;
+  top: 50%;
+}
+
+.or-divider::after {
+  content: "";
+  width: 500%;
+  height: 1px;
+  background-color: var(--divider);
+  position: absolute;
+  left: 110%;
+  top: 50%;
+}
+
+.social-login-links {
+  margin-top: 2rem;
+}
+
+.social-login-links > div {
+  outline: 1px solid var(--divider);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: outline 200ms ease;
+}
+
+.social-login-links > div:hover {
+  outline: 1px solid var(--darker-gray);
+}
+
+.social-login-links > div img {
+  width: 32px;
 }

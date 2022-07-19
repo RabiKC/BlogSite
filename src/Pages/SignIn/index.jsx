@@ -5,6 +5,7 @@ import "./style.css";
 const SignIn = () => {
   return (
     <main className="sign-in-page">
+      <div className="background"></div>
       <Form />
     </main>
   );

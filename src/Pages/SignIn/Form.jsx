@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const onSubmit = (e) => {
@@ -17,11 +18,32 @@ const Form = () => {
           <input type="password" name="password" id="password" required />
           <label for="password"> Password</label>
         </div>
-        <input type="submit" value="Sign-In" />
+        <div className="extra-options">
+          <div className="remember-me-wrapper">
+            <input
+              type="checkbox"
+              name="remember-me"
+              id="remember-me"
+              value="remember"
+            />
+            <label for="remember-me">Remember Me</label>
+          </div>
+          <Link to="#" className="forgot-password">
+            Forgot password?
+          </Link>
+        </div>
+        <input type="submit" value="Sign in" />
       </form>
-
-      <span>Forgot password?</span>
-      <span>Don't have an account?</span>
+      <Link to="#" className="signup-link">
+        Don't have an account?
+      </Link>
+      <span className="or-divider">Or</span>
+      <div className="social-login-links">
+        <div className="google">
+          <img src="google-logo.png" alt="" />
+          <span>Log in with Google</span>
+        </div>
+      </div>
     </div>
   );
 };
