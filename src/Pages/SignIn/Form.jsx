@@ -1,9 +1,16 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { BsEyeFill } from "react-icons/bs";
 
 const Form = () => {
+  const [type, setType] = useState("password");
   const onSubmit = (e) => {
     e.preventDefault();
+  };
+
+  const seePassword = () => {
+    type === "password" ? setType("text") : setType("password");
   };
 
   return (
@@ -15,8 +22,9 @@ const Form = () => {
           <label for="username">Username</label>
         </div>
         <div className="input-wrapper">
-          <input type="password" name="password" id="password" required />
+          <input type={type} name="password" id="password" required />
           <label for="password"> Password</label>
+          <BsEyeFill onClick={seePassword} />
         </div>
         <div className="extra-options">
           <div className="remember-me-wrapper">
@@ -40,8 +48,16 @@ const Form = () => {
       <span className="or-divider">Or</span>
       <div className="social-login-links">
         <div className="google">
-          <img src="google-logo.png" alt="" />
+          <img src="google-logo.png" alt="Google" />
           <span>Log in with Google</span>
+        </div>
+        <div className="facebook">
+          <img src="facebook-logo.png" alt="Facebook" />
+          <span>Log in with Facebook</span>
+        </div>
+        <div className="facebook">
+          <img src="twitter-logo.png" alt="Twitter" />
+          <span>Log in with Twitter</span>
         </div>
       </div>
     </div>
