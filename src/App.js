@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 // import { SpinnerCircularFixed } from "spinners-react";
-// import { DataProvider } from "./Context/DataContext";
+// import { DataProvider } from "./context/DataContext";
+import { AuthProvider } from "./context/AuthContext";
 
 import Navbar from "./Components/Navbar/Navbar.jsx";
-const Home = React.lazy(() => import("./Pages/Home/Home.jsx"));
+const Home = React.lazy(() => import("./Pages/Home/home.jsx"));
 const Blogs = React.lazy(() => import("./Pages/Blog/Blogs.jsx"));
 const Single = React.lazy(() => import("./Pages/SingleBlog/Single.jsx"));
 const Profile = React.lazy(() => import("./Pages/UserProfile/Profile.jsx"));
@@ -30,60 +31,60 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <DataProvider> */}
-        <Navbar />
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <React.Suspense fallback={loader()}>
-                <Home />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/blogs"
-            element={
-              <React.Suspense fallback={loader()}>
-                <Blogs />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/blogs/:id/:userId"
-            element={
-              <React.Suspense fallback={loader()}>
-                <Single />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/users/:userId/:username"
-            element={
-              <React.Suspense fallback={loader()}>
-                <Profile />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/sign-in"
-            element={
-              <React.Suspense fallback={loader()}>
-                <SignIn />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/sign-up"
-            element={
-              <React.Suspense fallback={loader()}>
-                <SignUp />
-              </React.Suspense>
-            }
-          />
-        </Routes>
-        {/* </DataProvider> */}
+        <AuthProvider>
+          <Navbar />
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <Home />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/blogs"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <Blogs />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/blogs/:id/:userId"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <Single />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/users/:userId/:username"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <Profile />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sign-in"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <SignIn />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/sign-up"
+              element={
+                <React.Suspense fallback={loader()}>
+                  <SignUp />
+                </React.Suspense>
+              }
+            />
+          </Routes>
+        </AuthProvider>
       </Router>
     </div>
   );
