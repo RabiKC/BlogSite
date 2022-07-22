@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsEyeFill } from "react-icons/bs";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 const Form = () => {
   const [type, setType] = useState("password");
@@ -24,7 +24,11 @@ const Form = () => {
         <div className="input-wrapper">
           <input type={type} name="password" id="password" required />
           <label for="password"> Password</label>
-          <BsEyeFill onClick={seePassword} />
+          {type === "password" ? (
+            <BsEyeSlashFill onClick={seePassword} />
+          ) : (
+            <BsEyeFill onClick={seePassword} />
+          )}
         </div>
         <div className="extra-options">
           <div className="remember-me-wrapper">
@@ -42,23 +46,27 @@ const Form = () => {
         </div>
         <input type="submit" value="Sign in" />
       </form>
-      <Link to="#" className="signup-link">
-        Don't have an account?
-      </Link>
+
       <span className="or-divider">Or</span>
       <div className="social-login-links">
         <div className="google">
           <img src="google-logo.png" alt="Google" />
-          <span>Log in with Google</span>
+          <span>Sign In with Google</span>
         </div>
         <div className="facebook">
           <img src="facebook-logo.png" alt="Facebook" />
-          <span>Log in with Facebook</span>
+          <span>Sign In with Facebook</span>
         </div>
         <div className="facebook">
           <img src="twitter-logo.png" alt="Twitter" />
-          <span>Log in with Twitter</span>
+          <span>Sign In with Twitter</span>
         </div>
+      </div>
+      <div className="suggest-signup">
+        <span>Don't have an account? </span>
+        <Link to="/sign-up" className="signup-link">
+          Sign Up
+        </Link>
       </div>
     </div>
   );

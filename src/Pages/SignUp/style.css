@@ -1,55 +1,61 @@
-.sign-in-page {
-  width: 100%;
+.sign-up-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sign-in-page .background {
-  width: 60%;
+.sign-up-page .background {
+  width: 100%;
   min-height: 100vh;
-  background-image: url(https://picsum.photos/1200/1500?random=50);
+  background: url(https://picsum.photos/1200/1500?random=1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.sign-in-page .form-wrapper {
+.form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   max-width: 761px;
   height: 100%;
   padding: 0 2rem;
 }
 
-.sign-in-page .form-wrapper h1 {
-  margin-bottom: 2rem;
+.form-wrapper h1 {
+  margin-bottom: 3rem;
   font-size: clamp(2.2em, 1.8vw + 0.4em, 5em);
 }
 
-.sign-in-page .form-wrapper form {
+.form-wrapper form {
   width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 2rem;
 }
 
-.sign-in-page .input-wrapper {
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.input-wrapper {
   position: relative;
   width: fit-content;
   isolation: isolate;
   width: 80%;
 }
 
-.sign-in-page .input-wrapper label {
+.input-wrapper label {
   position: absolute;
   top: 50%;
   left: 3%;
@@ -61,7 +67,7 @@
   padding: 0.1rem 0.25rem;
 }
 
-.sign-in-page .input-wrapper input {
+.input-wrapper input {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border: 1px solid var(--divider);
@@ -69,19 +75,18 @@
   width: 100%;
 }
 
-.sign-in-page .input-wrapper input:focus + label,
-.sign-in-page .input-wrapper input:valid + label {
+.input-wrapper input:focus + label,
+.input-wrapper input:valid + label {
   transform: translateY(-155%);
   font-size: 0.8rem;
   color: var(--secondary-color);
 }
 
-.sign-in-page .input-wrapper input:focus {
+.input-wrapper input:focus {
   outline: 1px solid var(--secondary-color);
-  border: 1px solid var(--secondary-color);
 }
 
-.sign-in-page .input-wrapper svg {
+.input-wrapper svg {
   position: absolute;
   right: 12px;
   top: 50%;
@@ -91,7 +96,7 @@
   cursor: pointer;
 }
 
-.sign-in-page .input-wrapper svg::after {
+.input-wrapper svg::after {
   content: "";
   position: absolute;
   width: 100px;
@@ -150,7 +155,7 @@
 .or-divider {
   color: var(--divider);
   position: relative;
-  margin-top: 1rem;
+  margin: 2rem 0;
 }
 
 .or-divider::before {
@@ -171,10 +176,6 @@
   position: absolute;
   left: 110%;
   top: 50%;
-}
-
-.social-login-links {
-  margin-top: 2rem;
 }
 
 .social-login-links > div {

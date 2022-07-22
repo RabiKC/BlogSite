@@ -259,8 +259,17 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "email": "rabi@gmail.com",
+      "password": "$2a$10$JQr5peT/L5NalTb4U4Q6/efPSVWU/V12X2lDhviGQ78OF42Tr2Z0O",
+      "firstName": "Rabi",
+      "lastName": "KC",
+      "username": "rabikc",
+      "id": 11
     }
   ],
+  "login": [],
   "posts": [
     {
       "userId": 1,

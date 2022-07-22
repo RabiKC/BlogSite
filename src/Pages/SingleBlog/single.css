@@ -350,8 +350,25 @@ textarea:focus {
   background-color: #fff;
 }
 
-.comment-message {
+.comment-message,
+.error-message {
   font-size: clamp(1rem, 0.9vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.comment-message {
+  color: rgb(0, 109, 0);
+}
+
+.error-message {
+  color: rgb(219, 0, 0);
+}
+
+.error-message svg {
+  margin-right: 0.3rem;
 }
 
 .single-comment {

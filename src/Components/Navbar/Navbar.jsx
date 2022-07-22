@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="page-logo">
           <NavLink to="/">
             {/* Leckerli One  */}
-            <img src="android-chrome-512x512.png" alt="" />
+            <img src="android-chrome-512x512.png" alt="Blogspot Logo" />
           </NavLink>
         </div>
         <ul className="nav-links">
@@ -19,10 +19,11 @@ const Navbar = () => {
           <li className="nav-link">
             <NavLink to="/blogs">Blogs</NavLink>
           </li>
-          <li className="nav-link">
-            <NavLink to="/sign-in">Sign In</NavLink>
-          </li>
         </ul>
+        <div className="user-action-links">
+          <NavLink to="/sign-in">Sign In</NavLink>
+          <NavLink to="/sign-up">Sign Up</NavLink>
+        </div>
       </div>
     </header>
   );

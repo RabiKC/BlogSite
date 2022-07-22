@@ -26,7 +26,6 @@ a {
   color: var(--black-text);
   text-decoration: none;
   font-size: clamp(1rem, 0.85vw, 3rem);
-  white-space: nowrap;
 }
 
 span {

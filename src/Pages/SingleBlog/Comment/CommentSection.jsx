@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SingleComment from "./SingleComment";
+import { BsCheckCircle, BsExclamationCircle } from "react-icons/bs";
 
 const CommentSection = ({ postId }) => {
   const commentsUrl = "http://localhost:8000/comments";
@@ -8,6 +9,7 @@ const CommentSection = ({ postId }) => {
   const [loading, setLoading] = useState(false);
   const [userComment, setUserComment] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const getComments = async () => {
     setLoading(true);
@@ -22,7 +24,7 @@ const CommentSection = ({ postId }) => {
     getComments();
   }, []);
 
-  const commentSubmit = (e) => {
+  const commentSubmit = async (e) => {
     e.preventDefault();
 
     if (userComment) {
@@ -34,29 +36,41 @@ const CommentSection = ({ postId }) => {
 
       const data = { postId, name, email, body };
 
-      fetch("http://localhost:8000/comments", {
+      const res = fetch("http://localhost:8000/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      setLoading(false);
 
+      const content = await res;
+      console.log(content);
+
+      if (content) {
+        getComments();
+      }
+      setLoading(false);
       setUserComment("");
       e.target.reset();
-      getComments();
       setMessage("Your comment has been successfully posted");
     } else {
-      setMessage("Please type something to post");
+      setError("Please type something to post");
     }
   };
 
   const removeMessage = () => {
     setMessage("");
+    setError("");
   };
 
   if (message) {
     setTimeout(() => {
       setMessage("");
+    }, 4000);
+  }
+
+  if (error) {
+    setTimeout(() => {
+      setError("");
     }, 4000);
   }
 
@@ -71,7 +85,18 @@ const CommentSection = ({ postId }) => {
           <div className="section-bg">
             <h1 className="comment-title">Comments</h1>
             <form onSubmit={commentSubmit} className="post-comment">
-              {message && <span className="comment-message">{message}</span>}
+              {message && (
+                <span className="comment-message">
+                  <BsCheckCircle />
+                  {message}
+                </span>
+              )}
+              {error && (
+                <span className="error-message">
+                  <BsExclamationCircle />
+                  {error}
+                </span>
+              )}
               <textarea
                 onClick={removeMessage}
                 value={userComment}
