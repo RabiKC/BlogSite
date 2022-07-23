@@ -34,11 +34,12 @@ const CommentSection = ({ postId }) => {
       if (userComment) {
         setLoading(true);
 
-        const name = "dfks gsdgnis gsonigs sdgnv";
-        const email = "hello@gmail.com";
-        const body = userComment;
-
-        const data = { postId, name, email, body };
+        const data = {
+          postId,
+          name: `${values.user.firstName} ${values.user.lastName}`,
+          email: `${values.user.email}`,
+          body: userComment,
+        };
 
         const res = fetch("http://localhost:8000/comments", {
           method: "POST",
@@ -91,7 +92,7 @@ const CommentSection = ({ postId }) => {
       ) : (
         <section className="comment-section">
           <div className="section-bg">
-            <h1 className="comment-title">Comments</h1>
+            <h1 className="comment-title">Comments ({postComment.length})</h1>
             <form onSubmit={commentSubmit} className="post-comment">
               {message && (
                 <span className="comment-message">

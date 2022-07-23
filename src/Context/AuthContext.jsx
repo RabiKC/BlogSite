@@ -11,6 +11,12 @@ export const AuthProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem("user"))
       : null
   );
+  const [token, setToken] = useState(
+    localStorage.getItem("access")
+      ? JSON.parse(localStorage.getItem("access"))
+      : null
+  );
+
   const [error, setError] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(() =>
     localStorage.getItem("access") ? true : false
@@ -33,6 +39,7 @@ export const AuthProvider = ({ children }) => {
     if (signin.ok === true) {
       const data = await signin.json();
       setUser(data.user);
+      setToken(data.accessToken);
       localStorage.setItem("access", JSON.stringify(data.accessToken));
       localStorage.setItem("user", JSON.stringify(data.user));
       console.log(data);
@@ -56,6 +63,7 @@ export const AuthProvider = ({ children }) => {
     error,
     setError,
     isLoggedIn,
+    token,
   };
 
   return (
