@@ -1,11 +1,15 @@
 .single-blog-page {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.7fr 0.3fr;
 }
 
 /******* BLOG USER SECTION *******/
+
+.blog-section {
+  width: 100%;
+}
 
 .blog-section .user-section {
   width: 100%;

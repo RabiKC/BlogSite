@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import SingleComment from "./SingleComment";
 import { BsCheckCircle, BsExclamationCircle } from "react-icons/bs";
+import AuthContext from "../../../context/AuthContext";
 
 const CommentSection = ({ postId }) => {
   const commentsUrl = "http://localhost:8000/comments";
@@ -10,6 +11,8 @@ const CommentSection = ({ postId }) => {
   const [userComment, setUserComment] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+
+  const { values } = useContext(AuthContext);
 
   const getComments = async () => {
     setLoading(true);
@@ -25,35 +28,40 @@ const CommentSection = ({ postId }) => {
   }, []);
 
   const commentSubmit = async (e) => {
-    e.preventDefault();
+    if (values.user) {
+      e.preventDefault();
 
-    if (userComment) {
-      setLoading(true);
+      if (userComment) {
+        setLoading(true);
 
-      const name = "dfks gsdgnis gsonigs sdgnv";
-      const email = "hello@gmail.com";
-      const body = userComment;
+        const name = "dfks gsdgnis gsonigs sdgnv";
+        const email = "hello@gmail.com";
+        const body = userComment;
 
-      const data = { postId, name, email, body };
+        const data = { postId, name, email, body };
 
-      const res = fetch("http://localhost:8000/comments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+        const res = fetch("http://localhost:8000/comments", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
 
-      const content = await res;
-      console.log(content);
+        const content = await res;
+        console.log(content);
 
-      if (content) {
-        getComments();
+        if (content) {
+          getComments();
+        }
+        setLoading(false);
+        setUserComment("");
+        e.target.reset();
+        setMessage("Your comment has been successfully posted");
+      } else {
+        setError("Please type something to post");
       }
-      setLoading(false);
-      setUserComment("");
-      e.target.reset();
-      setMessage("Your comment has been successfully posted");
     } else {
-      setError("Please type something to post");
+      e.preventDefault();
+      setError("You need to sign in first");
     }
   };
 
