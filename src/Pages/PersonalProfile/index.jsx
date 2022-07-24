@@ -5,11 +5,10 @@ const PersonalProfile = () => {
   const { values } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
+    email: JSON.stringify(values.user.email),
     location: "",
     age: "",
     gender: "",
-    email: "",
-    password: "",
   });
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -17,7 +16,7 @@ const PersonalProfile = () => {
     const fetchUserDetails = await fetch(
       `http://localhost:8000/users/${values.user.id}`,
       {
-        method: "POST",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -65,7 +64,7 @@ const PersonalProfile = () => {
           />
           <label htmlFor="gender">Gender</label>
         </div>
-        <div className="input-wrapper">
+        {/* <div className="input-wrapper">
           <input
             type="email"
             name="email"
@@ -84,7 +83,7 @@ const PersonalProfile = () => {
             onChange={handleChange}
           />
           <label htmlFor="gender">Password</label>
-        </div>
+        </div> */}
         <input type="submit" value="Submit" />
       </form>
     </div>

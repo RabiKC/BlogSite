@@ -8,14 +8,17 @@ const Sidebar = ({ user, setLoading }) => {
 
   return (
     <aside className="single-blog-sidebar">
-      <div className="get-started">
-        <Link to="/sign-up" className="get-started-link">
-          Get Started
-        </Link>
-        <Link to="/sign-in" className="sign-in-link">
-          Sign in
-        </Link>
-      </div>
+      {!user && (
+        <div className="get-started">
+          <Link to="/sign-up" className="get-started-link">
+            Get Started
+          </Link>
+          <Link to="/sign-in" className="sign-in-link">
+            Sign in
+          </Link>
+        </div>
+      )}
+
       {user && (
         <div className="sidebar-user-detail">
           <div className="details-top">

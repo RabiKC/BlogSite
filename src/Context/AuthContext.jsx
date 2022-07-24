@@ -38,13 +38,13 @@ export const AuthProvider = ({ children }) => {
     console.log(signin);
     if (signin.ok === true) {
       const data = await signin.json();
-      setUser(data.user);
-      setToken(data.accessToken);
+      // setUser(data.user);
+      // setToken(data.accessToken);
       localStorage.setItem("access", JSON.stringify(data.accessToken));
       localStorage.setItem("user", JSON.stringify(data.user));
       console.log(data);
       console.log(data.user);
-      //   navigate("/");
+      navigate("/");
     } else if (signin.status === 400) {
       setError("Your email or password is wrong");
       console.log(error);
@@ -57,6 +57,14 @@ export const AuthProvider = ({ children }) => {
     }, 4000);
   }
 
+  const logout = () => {
+    localStorage.removeItem("access");
+    localStorage.removeItem("user");
+    // setUser(null);
+    // setToken("");
+    navigate("/");
+  };
+
   const values = {
     user,
     handleSubmit,
@@ -64,6 +72,7 @@ export const AuthProvider = ({ children }) => {
     setError,
     isLoggedIn,
     token,
+    logout,
   };
 
   return (

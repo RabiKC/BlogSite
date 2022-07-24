@@ -52,7 +52,7 @@ const Single = () => {
   useEffect(() => {
     blogs();
     userDetail();
-  }, []);
+  }, [id]);
 
   return (
     <>

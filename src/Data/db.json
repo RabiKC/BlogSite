@@ -24,7 +24,8 @@
         "name": "Romaguera-Crona",
         "catchPhrase": "Multi-layered client-server neural-net",
         "bs": "harness real-time e-markets"
-      }
+      },
+      "followers": "196"
     },
     {
       "id": 2,
@@ -50,7 +51,8 @@
         "name": "Deckow-Crist",
         "catchPhrase": "Proactive didactic contingency",
         "bs": "synergize scalable supply-chains"
-      }
+      },
+      "followers": "232"
     },
     {
       "id": 3,
@@ -76,7 +78,8 @@
         "name": "Romaguera-Jacobson",
         "catchPhrase": "Face to face bifurcated interface",
         "bs": "e-enable strategic applications"
-      }
+      },
+      "followers": "154"
     },
     {
       "id": 4,
@@ -102,7 +105,8 @@
         "name": "Robel-Corkery",
         "catchPhrase": "Multi-tiered zero tolerance productivity",
         "bs": "transition cutting-edge web services"
-      }
+      },
+      "followers": "329"
     },
     {
       "id": 5,
@@ -128,7 +132,8 @@
         "name": "Keebler LLC",
         "catchPhrase": "User-centric fault-tolerant solution",
         "bs": "revolutionize end-to-end systems"
-      }
+      },
+      "followers": "267"
     },
     {
       "id": 6,
@@ -154,7 +159,8 @@
         "name": "Considine-Lockman",
         "catchPhrase": "Synchronised bottom-line interface",
         "bs": "e-enable innovative applications"
-      }
+      },
+      "followers": "403"
     },
     {
       "id": 7,
@@ -180,7 +186,8 @@
         "name": "Johns Group",
         "catchPhrase": "Configurable multimedia task-force",
         "bs": "generate enterprise e-tailers"
-      }
+      },
+      "followers": "199"
     },
     {
       "id": 8,
@@ -206,7 +213,8 @@
         "name": "Abernathy Group",
         "catchPhrase": "Implemented secondary concept",
         "bs": "e-enable extensible e-tailers"
-      }
+      },
+      "followers": "219"
     },
     {
       "id": 9,
@@ -232,7 +240,8 @@
         "name": "Yost and Sons",
         "catchPhrase": "Switchable contextually-based project",
         "bs": "aggregate real-time technologies"
-      }
+      },
+      "followers": "146"
     },
     {
       "id": 10,
@@ -258,7 +267,8 @@
         "name": "Hoeger LLC",
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
-      }
+      },
+      "followers": "112"
     },
     {
       "email": "rabi@gmail.com",
@@ -266,7 +276,8 @@
       "firstName": "Rabi",
       "lastName": "KC",
       "username": "rabikc",
-      "id": 11
+      "id": 11,
+      "followers": "34"
     }
   ],
   "login": [],

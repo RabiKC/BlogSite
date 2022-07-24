@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
         </ul>
         {values.user ? (
-          <span>{values.user.firstName}</span>
+          <span onClick={values.logout}>{values.user.firstName}</span>
         ) : (
           <div className="user-action-links">
             <NavLink to="/sign-in">Sign In</NavLink>
