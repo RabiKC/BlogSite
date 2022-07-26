@@ -1,10 +1,32 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useState, useRef, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import AuthContext from "../../context/AuthContext";
 
 const Navbar = () => {
   const { values } = useContext(AuthContext);
+  const [dropdown, setDropdown] = useState("dropdown");
+  const dropdownRef = useRef();
+
+  const dropdownToggle = () => {
+    dropdown === "dropdown"
+      ? setDropdown("dropdown visible")
+      : setDropdown("dropdown");
+  };
+
+  // useEffect(() => {
+  //   let handler = (event) => {
+  //     if (!dropdownRef.current.contains(event.target)) {
+  //       setDropdown("dropdown");
+  //     }
+  //   };
+
+  //   document.addEventListener("click", handler, !dropdown);
+
+  //   return () => {
+  //     document.removeEventListener("click", handler, !dropdown);
+  //   };
+  // });
 
   return (
     <header className="page-header">
@@ -24,7 +46,18 @@ const Navbar = () => {
           </li>
         </ul>
         {values.user ? (
-          <span onClick={values.logout}>{values.user.firstName}</span>
+          <div className="logged-user">
+            <div onClick={dropdownToggle}>
+              <img src="./user.png" alt={values.user.username} />
+              <span>
+                {values.user.firstName} {values.user.lastName}
+              </span>
+            </div>
+            <div className={dropdown} ref={dropdownRef}>
+              <Link to="#">Profile</Link>
+              <button onClick={values.logout}>Log out</button>
+            </div>
+          </div>
         ) : (
           <div className="user-action-links">
             <NavLink to="/sign-in">Sign In</NavLink>

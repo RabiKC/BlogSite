@@ -68,3 +68,54 @@
   outline: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
+
+.logged-user {
+  position: relative;
+}
+.logged-user div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition: filter 200ms ease;
+}
+
+.logged-user img {
+  width: 40px;
+  height: 40px;
+}
+
+.logged-user div:first-of-type:hover {
+  filter: opacity(80%);
+}
+
+.logged-user .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: all 250ms ease;
+  position: absolute;
+  left: 0%;
+  transform: translateX(-25%);
+  width: 10rem;
+  background-color: var(--white-text);
+}
+
+.logged-user .dropdown > * {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0.3rem 1rem;
+  border-bottom: 1px solid var(--divider);
+  text-align: center;
+}
+
+.logged-user .dropdown.visible {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+}

@@ -38,8 +38,8 @@ export const AuthProvider = ({ children }) => {
     console.log(signin);
     if (signin.ok === true) {
       const data = await signin.json();
-      // setUser(data.user);
-      // setToken(data.accessToken);
+      setUser(data.user);
+      setToken(data.accessToken);
       localStorage.setItem("access", JSON.stringify(data.accessToken));
       localStorage.setItem("user", JSON.stringify(data.user));
       console.log(data);
@@ -60,8 +60,8 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("access");
     localStorage.removeItem("user");
-    // setUser(null);
-    // setToken("");
+    setUser(null);
+    setToken("");
     navigate("/");
   };
 
