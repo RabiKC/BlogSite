@@ -52,6 +52,7 @@ const Single = () => {
   useEffect(() => {
     blogs();
     userDetail();
+    window.scrollTo(0, 0);
   }, [id]);
 
   return (

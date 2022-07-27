@@ -9,11 +9,15 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(
     localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user"))
+      : sessionStorage.getItem("user")
+      ? JSON.parse(sessionStorage.getItem("user"))
       : null
   );
   const [token, setToken] = useState(
     localStorage.getItem("access")
       ? JSON.parse(localStorage.getItem("access"))
+      : sessionStorage.getItem("access")
+      ? JSON.parse(sessionStorage.getItem("access"))
       : null
   );
 
@@ -22,7 +26,14 @@ export const AuthProvider = ({ children }) => {
     localStorage.getItem("access") ? true : false
   );
 
+  const [rememberMe, setRememberMe] = useState(false);
+
   const navigate = useNavigate();
+
+  const checkboxHandle = (e) => {
+    setRememberMe(e.target.checked);
+    console.log(e.target.checked);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +56,18 @@ export const AuthProvider = ({ children }) => {
       console.log(data);
       console.log(data.user);
       navigate("/");
-    } else if (signin.status === 400) {
+    }
+    // else if (signin.ok === true && rememberMe === false) {
+    //   const data = await signin.json();
+    //   setUser(data.user);
+    //   setToken(data.accessToken);
+    //   sessionStorage.setItem("access", JSON.stringify(data.accessToken));
+    //   sessionStorage.setItem("user", JSON.stringify(data.user));
+    //   console.log(data);
+    //   console.log(data.user);
+    //   navigate("/");
+    // }
+    else if (signin.status === 400) {
       setError("Your email or password is wrong");
       console.log(error);
     }
@@ -73,6 +95,8 @@ export const AuthProvider = ({ children }) => {
     isLoggedIn,
     token,
     logout,
+    checkboxHandle,
+    rememberMe,
   };
 
   return (

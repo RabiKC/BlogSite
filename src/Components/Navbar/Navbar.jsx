@@ -14,19 +14,21 @@ const Navbar = () => {
       : setDropdown("dropdown");
   };
 
-  // useEffect(() => {
-  //   let handler = (event) => {
-  //     if (!dropdownRef.current.contains(event.target)) {
-  //       setDropdown("dropdown");
-  //     }
-  //   };
+  const clickOutside = (e) => {
+    if (!dropdownRef.current.contains(e.target)) {
+      setDropdown("dropdown");
+    }
+  };
 
-  //   document.addEventListener("click", handler, !dropdown);
+  // Do something after component renders
+  useEffect(() => {
+    document.addEventListener("mousedown", clickOutside);
 
-  //   return () => {
-  //     document.removeEventListener("click", handler, !dropdown);
-  //   };
-  // });
+    // clean up function before running new effect
+    return () => {
+      document.removeEventListener("mousedown", clickOutside);
+    };
+  }, [dropdown]);
 
   return (
     <header className="page-header">
@@ -46,14 +48,14 @@ const Navbar = () => {
           </li>
         </ul>
         {values.user ? (
-          <div className="logged-user">
+          <div className="logged-user" ref={dropdownRef}>
             <div onClick={dropdownToggle}>
               <img src="./user.png" alt={values.user.username} />
               <span>
                 {values.user.firstName} {values.user.lastName}
               </span>
             </div>
-            <div className={dropdown} ref={dropdownRef}>
+            <div className={dropdown}>
               <Link to="#">Profile</Link>
               <button onClick={values.logout}>Log out</button>
             </div>

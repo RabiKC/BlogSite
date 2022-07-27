@@ -53,6 +53,8 @@ const Form = () => {
               name="remember-me"
               id="remember-me"
               value="remember"
+              onChange={values.checkboxHandle}
+              checked={values.rememberMe}
             />
             <label htmlFor="remember-me">Remember Me</label>
           </div>
