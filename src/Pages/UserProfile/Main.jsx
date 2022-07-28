@@ -50,7 +50,7 @@ const Main = ({ user, setLoading }) => {
         <div className="cards-container">
           {userPosts &&
             userPosts.map((u, i) => (
-              <div className="card">
+              <div className="card" key={i}>
                 <Link to={`/blogs/${u.id}/${user.id}`}>
                   <h2>{u.title}</h2>
                   <p>{u.body}</p>

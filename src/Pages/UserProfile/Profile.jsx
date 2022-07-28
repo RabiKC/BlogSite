@@ -114,8 +114,8 @@ const Profile = () => {
                 <div className="section-wrapper profile-section">
                   <Sidebar user={user} />
                   <Main user={user} setLoading={setLoading} />
+                  <Album userAlbum={userAlbum} setLoading={setLoading} />
                 </div>
-                <Album userAlbum={userAlbum} setLoading={setLoading} />
               </section>
             </>
           )}

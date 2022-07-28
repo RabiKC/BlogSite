@@ -39,24 +39,24 @@ const UserDetail = ({ user }) => {
       </div>
       <ul className="user-social-links">
         <li className="link">
-          <Link to="#">
+          <a href="https://twitter.com/" rel="noreferrer" target="_blank">
             <BsTwitter />
-          </Link>
+          </a>
         </li>
         <li className="link">
-          <Link to="#">
+          <a href="https://facebook.com/" rel="noreferrer" target="_blank">
             <BsFacebook />
-          </Link>
+          </a>
         </li>
         <li className="link">
-          <Link to="#">
+          <a href="https://linkedin.com/" rel="noreferrer" target="_blank">
             <BsLinkedin />
-          </Link>
+          </a>
         </li>
         <li className="link">
-          <Link to="#">
+          <a href="https://github.com/" rel="noreferrer" target="_blank">
             <BsGithub />
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

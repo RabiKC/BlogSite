@@ -28,7 +28,7 @@ const Sidebar = ({ user, setLoading }) => {
             <Link to={userLink} className="username">
               {user.name}
             </Link>
-            <span>303 Followers</span>
+            <span>{user.followers} Followers</span>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
