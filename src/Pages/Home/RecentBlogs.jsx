@@ -8,15 +8,14 @@ const RecentBlogs = ({ setLoading }) => {
   const [recent, setRecent] = useState(null);
 
   const recentBlogs = async () => {
-    setLoading(true);
-
     try {
-      const data = await axios.get(postUrl);
-
-      setRecent(data.data);
-      console.log(data.data);
+      setLoading(true);
+      fetch(postUrl)
+        .then((res) => res.json())
+        .then((data) => setRecent(data));
       setLoading(false);
     } catch (error) {
+      setLoading(true);
       console.log(error);
       setLoading(false);
     }
@@ -26,19 +25,18 @@ const RecentBlogs = ({ setLoading }) => {
     recentBlogs();
   }, []);
 
-  const shuffled = recent && recent.sort(() => 0.5 - Math.random()).slice(0, 4);
+  const shuffled =
+    recent && recent.sort(() => 0.5 - Math.random()).slice(0, 10);
 
   return (
-    <section className="popular-blogs section">
-      <div className="section-wrapper">
-        <h1 className="section-title">Recent Posts</h1>
-        <div className="recent-grid-section">
-          {shuffled ? (
-            shuffled.map((r, i) => <ContentCard content={r} key={i} />)
-          ) : (
-            <h2 className="no-post">No Recent Posts</h2>
-          )}
-        </div>
+    <section className="recent-blogs section">
+      <h1 className="section-title">Recent Posts</h1>
+      <div className="recent-flex-section">
+        {shuffled ? (
+          shuffled.map((r, i) => <ContentCard content={r} key={i} />)
+        ) : (
+          <h2 className="no-post">No Recent Posts</h2>
+        )}
       </div>
     </section>
   );

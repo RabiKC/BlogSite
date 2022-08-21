@@ -2,15 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import RecentBlogs from "./RecentBlogs";
-import PopularBlogs from "./PopularBlogs";
-import PopularBloggers from "./PopularBloggers";
-
-// https://i.picsum.photos/id/681/3840/2160.jpg?hmac=ZerVaxp0QVykVeeMjE7nvOB5q7p2cEBAfxZZYjXqlXs
 
 const Home = () => {
-  const heroImg =
-    "https://i.picsum.photos/id/475/1980/1080.jpg?hmac=frSzH7BplvWgovEYY6ZlAlk4mwRCo_0pcCTLpgLhw0Q";
-
   const [loading, setLoading] = useState(false);
 
   return (
@@ -18,8 +11,8 @@ const Home = () => {
       {loading ? (
         <div className="loading-section">Loading...</div>
       ) : (
-        <main className="home-page">
-          <section
+        <main className="home-page page">
+          {/* <section
             className="hero-section"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.4)), url(${heroImg})`,
@@ -36,10 +29,39 @@ const Home = () => {
               </div>
               <div className="hero-right"></div>
             </div>
-          </section>
+          </section> */}
+          {/* <PopularBlogs setLoading={setLoading} /> */}
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            neque aut suscipit perferendis nam dolores, repudiandae tempora
+            architecto at, alias nostrum beatae aperiam! Et quaerat minima
+            ducimus nesciunt repellat ab ratione omnis, consectetur dicta nulla
+            commodi reprehenderit ut ullam aliquid minus accusamus est mollitia
+            hic rerum aperiam aspernatur quia ad corporis nemo. Corrupti
+            recusandae voluptates blanditiis non officiis natus libero vel
+            quibusdam asperiores necessitatibus officia eum doloremque vitae,
+            nam magnam cumque reiciendis assumenda. Officiis vel repellendus
+            molestiae dolores esse voluptatibus similique quia alias. Similique
+            aspernatur magnam eius error, harum culpa sed fugiat beatae possimus
+            obcaecati. Cumque voluptas et voluptatem vero.
+          </div>
           <RecentBlogs setLoading={setLoading} />
-          <PopularBlogs setLoading={setLoading} />
-          <PopularBloggers setLoading={setLoading} />
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            neque aut suscipit perferendis nam dolores, repudiandae tempora
+            architecto at, alias nostrum beatae aperiam! Et quaerat minima
+            ducimus nesciunt repellat ab ratione omnis, consectetur dicta nulla
+            commodi reprehenderit ut ullam aliquid minus accusamus est mollitia
+            hic rerum aperiam aspernatur quia ad corporis nemo. Corrupti
+            recusandae voluptates blanditiis non officiis natus libero vel
+            quibusdam asperiores necessitatibus officia eum doloremque vitae,
+            nam magnam cumque reiciendis assumenda. Officiis vel repellendus
+            molestiae dolores esse voluptatibus similique quia alias. Similique
+            aspernatur magnam eius error, harum culpa sed fugiat beatae possimus
+            obcaecati. Cumque voluptas et voluptatem vero.
+          </div>
+
+          {/* <PopularBloggers setLoading={setLoading} /> */}
         </main>
       )}
     </>

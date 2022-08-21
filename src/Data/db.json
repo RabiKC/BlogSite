@@ -271,13 +271,12 @@
       "followers": "112"
     },
     {
-      "email": "rabi@gmail.com",
-      "password": "$2a$10$JQr5peT/L5NalTb4U4Q6/efPSVWU/V12X2lDhviGQ78OF42Tr2Z0O",
+      "email": "robbie@gmail.com",
+      "password": "$2a$10$FjT9FvxN21rVt2kw1hNa7.eY0.ezunFq30oJAMTGeKWH3T6aSabTq",
       "firstName": "Rabi",
       "lastName": "KC",
-      "username": "rabikc",
-      "id": 11,
-      "followers": "34"
+      "username": "rabi.kc",
+      "id": 11
     }
   ],
   "login": [],
