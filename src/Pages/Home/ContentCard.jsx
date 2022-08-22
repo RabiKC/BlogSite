@@ -49,7 +49,7 @@ const ContentCard = ({ content }) => {
               </div>
               <div className="img">
                 <img
-                  src={`https://picsum.photos/535/300?random=${content.id}`}
+                  src={`https://picsum.photos/480/270?random=${content.id}`}
                   alt={content.title}
                 />
               </div>

@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./utils/PrivateRoutes";
 import PublicRoute from "./utils/PublicRoutes";
 
-import Navbar from "./Components/Navbar/Navbar.jsx";
+import Navbar from "./Components/Navbar.jsx";
 const Home = React.lazy(() => import("./Pages/Home/home.jsx"));
 const Blogs = React.lazy(() => import("./Pages/Blog/Blogs.jsx"));
 const Single = React.lazy(() => import("./Pages/SingleBlog/Single.jsx"));
