@@ -29,8 +29,8 @@ const RecentBlogs = ({ setLoading }) => {
     recent && recent.sort(() => 0.5 - Math.random()).slice(0, 10);
 
   return (
-    <section className="recent-blogs section">
-      <h1 className="section-title">Recent Posts</h1>
+    <section className="blogs-category recent-blogs section">
+      {/* <h1 className="section-title">Recent Posts</h1> */}
       <div className="recent-flex-section">
         {shuffled ? (
           shuffled.map((r, i) => <ContentCard content={r} key={i} />)

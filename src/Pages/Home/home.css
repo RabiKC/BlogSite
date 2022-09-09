@@ -1,18 +1,21 @@
 /********* HOME PAGE *******/
 .home-page {
   display: grid;
-  grid-template-columns: 0.2fr 0.52fr 0.28fr;
+  grid-template-columns: 2.1fr 5fr 2.5fr;
   gap: 1rem;
 }
 
+/********** LEFT HOME SIDEBAR **********/
+
 .left-home-sidebar {
-  padding-top: 0.8rem;
+  padding-top: 5rem;
 }
 
 .left-home-sidebar h1 {
   font-size: 1.2rem;
   line-height: 1.4;
 }
+
 .left-home-sidebar .user-action-suggestion {
   background-color: #fff;
   display: flex;
@@ -158,7 +161,7 @@
 
 /******* POPULAR BLOGGERS ******/
 
-.bloggers-grid {
+/* .bloggers-grid {
   width: 100%;
   margin: auto;
   display: grid;
@@ -260,4 +263,71 @@
 
 .bloggers-card-content .links a:last-of-type {
   border: 1px solid var(--white-text);
+} */
+
+/********** RIGHT SIDEBAR *********/
+
+.home-right-sidebar {
+  height: fit-content;
+  padding-top: 5rem;
+}
+
+.sidebar-wrapper {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid var(--divider);
+}
+
+.discover-links-section h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.discover-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-bottom: 2rem;
+}
+
+.discover-links li {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--divider);
+  transition: border-color 200ms ease;
+}
+
+.discover-links li:hover {
+  border-color: var(--primary-color);
+}
+
+.discover-links li a {
+  font-size: 0.8rem;
+  color: var(--darker-gray);
+  transition: color 200ms ease;
+}
+
+.discover-links li:hover > a {
+  color: var(--primary-color);
+}
+
+.home-right-sidebar .sidebar-footer {
+  border-top: 1px solid var(--divider);
+  padding-top: 2rem;
+}
+
+.home-right-sidebar .sidebar-footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.home-right-sidebar .sidebar-footer a {
+  font-size: 0.8rem;
+  transition: text-decoration-color 200ms ease, color 200ms ease;
+}
+
+.home-right-sidebar .sidebar-footer a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
 }

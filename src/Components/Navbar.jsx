@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import { BsSearch } from "react-icons/bs";
 
 const Navbar = () => {
   const { values } = useContext(AuthContext);
@@ -38,14 +39,18 @@ const Navbar = () => {
             <img src="android-chrome-512x512.png" alt="Blogspot Logo" />
           </NavLink>
         </div>
-        <ul className="nav-links">
+        <form className="search-form">
+          <input type="search" name="search" id="searchBtn" />
+          <BsSearch />
+        </form>
+        {/* <ul className="nav-links">
           <li className="nav-link">
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="nav-link">
             <NavLink to="/blogs">Blogs</NavLink>
           </li>
-        </ul>
+        </ul> */}
         {values.user ? (
           <div className="logged-user" ref={dropdownRef}>
             <div onClick={dropdownToggle}>

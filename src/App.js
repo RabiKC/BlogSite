@@ -29,7 +29,7 @@ function App() {
           color="rgba(58, 123, 153, 1)"
           secondaryColor="rgba(0, 0, 0, 0.44)"
         /> */}
-        <h1>Loading...</h1>
+        Loading...
       </div>
     );
   };
