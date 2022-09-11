@@ -40,17 +40,16 @@ const Navbar = () => {
           </NavLink>
         </div>
         <form className="search-form">
-          <input type="search" name="search" id="searchBtn" />
-          <BsSearch />
+          <input
+            type="search"
+            name="search"
+            id="searchBtn"
+            placeholder="Search..."
+          />
+          <button className="search-btn" type="submit">
+            <BsSearch />
+          </button>
         </form>
-        {/* <ul className="nav-links">
-          <li className="nav-link">
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="nav-link">
-            <NavLink to="/blogs">Blogs</NavLink>
-          </li>
-        </ul> */}
         {values.user ? (
           <div className="logged-user" ref={dropdownRef}>
             <div onClick={dropdownToggle}>

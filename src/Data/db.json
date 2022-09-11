@@ -277,6 +277,22 @@
       "lastName": "KC",
       "username": "rabi.kc",
       "id": 11
+    },
+    {
+      "email": "fasdfasd@f",
+      "password": "$2a$10$WP9NkxG/bggfYoVC093LeePo9z/hyagRDdjK/UoN3QPWBRdQVTyRe",
+      "firstName": "sjkdfg",
+      "lastName": "sd",
+      "username": "adfhasldf",
+      "id": 12
+    },
+    {
+      "email": "fasdfasd@sd.com",
+      "password": "$2a$10$vaRvjTxcPd7zkxK.9sze5eqyr0xP6udHvZMIbm4b2fJlqNGo7b0B2",
+      "firstName": "sjkdfg",
+      "lastName": "sd",
+      "username": "adfhasldf",
+      "id": 13
     }
   ],
   "login": [],
@@ -4396,6 +4412,34 @@
       "email": "robbie@gmail.com",
       "body": "Hello World",
       "id": 502
+    },
+    {
+      "postId": 99,
+      "name": "Rabi KC",
+      "email": "rabi@gmail.com",
+      "body": "sykmtdhm",
+      "id": 503
+    },
+    {
+      "postId": 99,
+      "name": "Rabi KC",
+      "email": "rabi@gmail.com",
+      "body": "u,d,d.,ykmghm,",
+      "id": 504
+    },
+    {
+      "postId": 99,
+      "name": "Rabi KC",
+      "email": "rabi@gmail.com",
+      "body": "dytkmh,  jdj,jh.",
+      "id": 505
+    },
+    {
+      "postId": 61,
+      "name": "Rabi KC",
+      "email": "robbie@gmail.com",
+      "body": "Hello world",
+      "id": 506
     }
   ],
   "albums": [
